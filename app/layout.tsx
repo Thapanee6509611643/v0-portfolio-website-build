@@ -16,7 +16,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Rada. | UX/UI Designer & Full-Stack Developer',
+  title: 'Thapanee. | UX/UI Designer & Full-Stack Developer',
   description: 'Designing with Logic. Building with Purpose. Portfolio of a CS student passionate about creating intuitive, human-centered digital experiences.',
   generator: 'v0.app',
   icons: {
