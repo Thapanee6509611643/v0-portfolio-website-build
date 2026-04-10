@@ -478,7 +478,7 @@ function Footer() {
 
             <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
               <a
-                href="#"
+                href="https://drive.google.com/file/d/16Jig1cqzv2LBBmXrxev_eiuDtsL7-pvS/view?usp=sharing"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-foreground text-background rounded-xl font-medium hover:bg-foreground/90 transition-colors"
               >
                 <FileText className="w-4 h-4" />
