@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/logo.png',
+        url: '/my-notion-face-transparent.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/logo.png',
+        url: '/my-notion-face-transparent.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/logo.png',
+        url: '/my-notion-face-transparent.png',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/logo.png',
+    apple: '/my-notion-face-transparent.png',
   },
 }
 

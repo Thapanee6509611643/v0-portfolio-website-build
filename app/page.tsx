@@ -116,16 +116,16 @@ const projects = [
     category: ["UX/UI Design"],
     tools: ["Figma", "Data Visualization"],
   },
-  /*{
+ {
     id: "12",
     year: "2026",
     title: "AI-Based Dementia Screening",
-    image: "/components/Photos/2.png",
+    image: "/components/Photos/vit.png",
     link: "https://www.figma.com/...", // <--- เพิ่มบรรทัดนี้เข้าไป
     tag: "Senior Project",
     category: ["AI & ML", "Full-Stack Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
-  },*/
+  }
 ]
 
 const categories = ["All", "UX/UI Design", "Full-Stack Dev", "AI & ML"]
