@@ -50,7 +50,7 @@ const projects = [
     year: "2025",
     title: "Keeppook Tracker",
     image: "/components/Photos/keep.png",
-    link: "https://github.com/ThaLovelace/KeepTang", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://github.com/ThaLovelace/KeepTang",
     tag: "Personal Project",
     category: ["Full-Stack Dev", "AI & ML"],
     tools: ["Figma", "Java", "Android Studio"],
@@ -60,7 +60,7 @@ const projects = [
     year: "2025",
     title: "QuickStay Hotel Booking",
     image: "/components/Photos/hotel.png",
-    link: "https://quickstay-blond.vercel.app/", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://quickstay-blond.vercel.app/", // 
     tag: "Development",
     category: ["Full-Stack Dev"],
     tools: ["React", "Node.js", "MongoDB"],
@@ -70,7 +70,7 @@ const projects = [
     year: "2025",
     title: "Restaurant POS Redesign",
     image: "/components/Photos/pos.png",
-    link: "https://www.figma.com/...", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://www.figma.com/proto/GRQK7epOLpNmuCvd5eklM2/POS?node-id=45-583&t=5R61Oa69OgIlMQkt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=197%3A6329", // <--- เพิ่มบรรทัดนี้เข้าไป
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Component Design"],
@@ -80,7 +80,7 @@ const projects = [
     year: "2025",
     title: "Ledlight 3D Landing Page",
     image: "/components/Photos/ledlight.png",
-    link: "https://www.figma.com/...", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://www.figma.com/...",
     tag: "Client Work",
     category: ["UX/UI Design", "Full-Stack Dev"],
     tools: ["Figma", "Next.js", "TailwindCSS"],
@@ -90,7 +90,7 @@ const projects = [
     year: "2025",
     title: "MyGPT AI Chatbot",
     image: "/components/Photos/gpt.png",
-    link: "https://my-gpt-beta-pearl.vercel.app", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://my-gpt-beta-pearl.vercel.app",
     tag: "Development",
     category: ["Full-Stack Dev", "AI & ML"],
     tools: ["React", "Gemini API"],
@@ -110,7 +110,7 @@ const projects = [
     year: "2025",
     title: "F&B Dash: Hotel Analytics",
     image: "/components/Photos/fs.png",
-    link: "https://www.figma.com/...", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://www.figma.com/proto/KI4Kqu7p4ahZpnaq6eTjQD/DASH--by-FS-?node-id=572-4798&t=prEUzpFtioRBJr9Q-1&scaling=contain&content-scaling=fixed&page-id=189%3A8134&starting-point-node-id=572%3A4798",
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Data Visualization"],
