@@ -121,7 +121,7 @@ const projects = [
     year: "2026",
     title: "AI-Based Dementia Screening",
     image: "/components/Photos/vit.png",
-    link: "https://www.figma.com/...", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://dcdt-demo.vercel.app/", 
     tag: "Senior Project",
     category: ["AI & ML", "Full-Stack Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
