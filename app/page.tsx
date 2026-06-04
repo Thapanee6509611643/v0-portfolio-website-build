@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useMemo, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowDown, ArrowRight, Mail, Linkedin, FileText, Menu, X, ExternalLink} from "lucide-react"
@@ -504,7 +503,7 @@ function Footer() {
         </div>
 
         <div className="mt-12 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Thapanee. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Made with 🧋 by Thapanee</p>
         </div>
       </div>
     </footer>
