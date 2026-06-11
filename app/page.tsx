@@ -120,7 +120,8 @@ const projects = [
     year: "2026",
     title: "AI-Based Dementia Screening",
     image: "/components/Photos/vit.png",
-    link: "https://dcdt-demo.vercel.app/", 
+    link: "/projects/dcdt-hybrid",  // ← internal detail page
+    detailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
     tag: "Senior Project",
     category: ["AI & ML", "Full-Stack Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
@@ -316,18 +317,30 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
         />
 
-        {/* --- ปุ่มลิงก์มุมขวาบน (จะโชว์ก็ต่อเมื่อเราใส่ข้อมูล link ไว้) --- */}
+        {/* --- ปุ่มลิงก์มุมขวาบน ---
+            detailPage = true  → ใช้ Next <Link> (navigate ภายใน)
+            detailPage = false → ใช้ <a target="_blank"> (เปิดแท็บใหม่)
+        */}
         {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            // แต่งสไตล์ปุ่ม: สีดำ (foreground) ลอยมุมขวาบน (top-4 right-4) มีเงา (shadow-lg)
-            className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 bg-foreground text-background rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-            aria-label={`View ${project.title}`}
-          >
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          (project as any).detailPage ? (
+            <Link
+              href={project.link}
+              className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 bg-foreground text-background rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+              aria-label={`View ${project.title}`}
+            >
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          ) : (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 bg-foreground text-background rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+              aria-label={`View ${project.title}`}
+            >
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          )
         )}
         {/* ----------------------------------------------------- */}
       </div>
