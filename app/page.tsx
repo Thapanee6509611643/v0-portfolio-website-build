@@ -121,7 +121,7 @@ const projects = [
     title: "AI-Based Dementia Screening",
     image: "/components/Photos/vit.png",
     link: "/projects/dcdt-hybrid",  // ← internal detail page
-    detailPage: true,                // ← Use Next Link instead of <a target="_blank">
+    detailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
     tag: "Senior Project",
     category: ["AI & ML", "Full-Stack Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
@@ -300,6 +300,34 @@ function FilterButtons({
 }
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+  const isDetailPage = (project as any).detailPage === true
+
+  // Wrapper: ถ้ามี detail page ใช้ Link ครอบทั้ง card
+  // ถ้าเป็น external link ใช้ <a> ครอบ (เหมือนเดิม)
+  // ถ้าไม่มีลิงค์เลย ใช้ <article> ธรรมดา
+  const CardWrapper = ({ children }: { children: React.ReactNode }) => {
+    if (isDetailPage) {
+      return (
+        <Link href={project.link!} className="group cursor-pointer flex flex-col">
+          {children}
+        </Link>
+      )
+    }
+    if (project.link && !isDetailPage) {
+      return (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group cursor-pointer flex flex-col"
+        >
+          {children}
+        </a>
+      )
+    }
+    return <div className="group flex flex-col">{children}</div>
+  }
+
   return (
     <motion.article
       layout
@@ -307,67 +335,44 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4 }}
-      className="group cursor-pointer flex flex-col"
     >
-      {/* กรอบรูปภาพ (ตั้ง relative ไว้เพื่ออ้างอิงตำแหน่งปุ่ม) */}
-      <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-muted relative">
-        <img 
-          src={project.image || "/placeholder.jpg"} 
-          alt={project.title}
-          className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
-        />
-
-        {/* --- ปุ่มลิงก์มุมขวาบน ---
-            detailPage = true  → ใช้ Next <Link> (navigate ภายใน)
-            detailPage = false → ใช้ <a target="_blank"> (เปิดแท็บใหม่)
-        */}
-        {project.link && (
-          (project as any).detailPage ? (
-            <Link
-              href={project.link}
-              className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 bg-foreground text-background rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-              aria-label={`View ${project.title}`}
-            >
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          ) : (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 bg-foreground text-background rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-              aria-label={`View ${project.title}`}
-            >
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          )
-        )}
-        {/* ----------------------------------------------------- */}
-      </div>
-
-      <div className="space-y-2 flex-1">
-        <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-          {project.tag}
-        </span>
-        <h3 className="font-serif text-xl font-bold group-hover:text-muted-foreground transition-colors">
-          {project.title}
-        </h3>
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-sm text-muted-foreground">{project.year}</span>
-          <span className="text-muted-foreground">·</span>
-          {project.tools.slice(0, 2).map((tool) => (
-            <span
-              key={tool}
-              className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
-            >
-              {tool}
-            </span>
-          ))}
+      <CardWrapper>
+        {/* รูปภาพ */}
+        <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-muted relative">
+          <img
+            src={project.image || "/placeholder.jpg"}
+            alt={project.title}
+            className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
+          />
         </div>
-        <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-2">
-          View Project <ArrowRight className="w-4 h-4" />
+
+        <div className="space-y-2 flex-1">
+          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            {project.tag}
+          </span>
+          <h3 className="font-serif text-xl font-bold group-hover:text-muted-foreground transition-colors">
+            {project.title}
+          </h3>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-muted-foreground">{project.year}</span>
+            <span className="text-muted-foreground">·</span>
+            {project.tools.slice(0, 2).map((tool) => (
+              <span
+                key={tool}
+                className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+          {/* "View Project" text ที่ fade in on hover — เฉพาะ card ที่มีลิงค์ */}
+          {project.link && (
+            <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-2">
+              {isDetailPage ? "Read Case Study" : "View Project"} <ArrowRight className="w-4 h-4" />
+            </div>
+          )}
         </div>
-      </div>
+      </CardWrapper>
     </motion.article>
   )
 }
