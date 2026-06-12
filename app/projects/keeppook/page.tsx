@@ -31,6 +31,17 @@ const content = {
       { value: "Self", label: "Learning System" },
     ],
 
+    screenshots: {
+      title: "App in action",
+      demoVideo: "" as string,
+      screens: [
+        { image: "" as string, label: "Dashboard", desc: "Balance overview & recent transactions" },
+        { image: "" as string, label: "Smart Input", desc: "AI auto-categorizes as you type" },
+        { image: "" as string, label: "Calendar", desc: "Browse spending history by date" },
+        { image: "" as string, label: "Chart & AI Advisor", desc: "Spending breakdown + AI financial tips" },
+      ],
+    },
+
     problem: {
       title: "Why another finance app?",
       body: "Most expense trackers fail for two reasons: they're too much work to fill in, and they're too boring to keep using. Keeppook was built to fix both — eliminate the friction of categorization with AI, and bring people back every day with a streak system.",
@@ -125,7 +136,7 @@ const content = {
     tagline: "แอปบันทึกรายจ่ายที่จัดหมวดหมู่ให้อัตโนมัติ ก่อนที่คุณจะต้องคิด",
 
     links: {
-      github: "https://github.com/ThaLovelace/KeepTang",
+      github: "https://github.com/ThaLovelace/Keeppook",
       demo: "",
     },
 
@@ -152,6 +163,17 @@ const content = {
           label: "ขาดแรงจูงใจ",
           desc: "ไม่มีเหตุผลที่จะกลับมาใช้ซ้ำ ทำให้ผู้ใช้ส่วนใหญ่เลิกใช้ภายในไม่กี่สัปดาห์",
         },
+      ],
+    },
+
+    screenshots: {
+      title: "หน้าจอแอปจริง",
+      demoVideo: "" as string,
+      screens: [
+        { image: "" as string, label: "Dashboard", desc: "ภาพรวมยอดเงินและรายการล่าสุด" },
+        { image: "" as string, label: "Smart Input", desc: "AI จัดหมวดหมู่ให้อัตโนมัติขณะพิมพ์" },
+        { image: "" as string, label: "ปฏิทิน", desc: "ดูประวัติการใช้จ่ายตามวันที่" },
+        { image: "" as string, label: "Chart & AI Advisor", desc: "กราฟสรุปรายจ่าย + คำแนะนำจาก AI" },
       ],
     },
 
@@ -321,6 +343,49 @@ export default function KeeppookPage() {
               <motion.div key={h.label} variants={fadeUp} className="bg-background px-6 py-8 text-center">
                 <div className="font-serif text-3xl md:text-4xl font-bold tracking-tight">{h.value}</div>
                 <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider font-medium">{h.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* ── Screenshots ── */}
+        <motion.section
+          className="py-10 border-b border-border"
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">App Screens</motion.p>
+          <motion.h2 variants={fadeUp} className="font-serif text-2xl font-bold mb-8">{c.screenshots.title}</motion.h2>
+
+          {/* Demo video placeholder */}
+          <motion.div variants={fadeUp} className="mb-8">
+            {c.screenshots.demoVideo ? (
+              <video src={c.screenshots.demoVideo} controls className="w-full rounded-2xl border border-border" />
+            ) : (
+              <div className="w-full rounded-2xl bg-muted/50 border border-dashed border-border h-48 flex flex-col items-center justify-center gap-2 text-muted-foreground">
+                <span className="text-3xl">🎬</span>
+                <p className="text-sm font-medium">Demo Video</p>
+                <p className="text-xs opacity-60">ใส่คลิป Demo: เปลี่ยน demoVideo ใน content object</p>
+              </div>
+            )}
+          </motion.div>
+
+          {/* 4 screenshots grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {c.screenshots.screens.map((s) => (
+              <motion.div key={s.label} variants={fadeUp} className="flex flex-col gap-2">
+                {s.image ? (
+                  <img src={s.image} alt={s.label} className="w-full rounded-2xl border border-border object-cover aspect-[9/19]" />
+                ) : (
+                  <div className="w-full rounded-2xl bg-muted border border-dashed border-border aspect-[9/19] flex flex-col items-center justify-center gap-1.5 text-muted-foreground px-3">
+                    <span className="text-xl">📱</span>
+                    <p className="text-xs font-medium text-center">{s.label}</p>
+                  </div>
+                )}
+                <div className="px-1">
+                  <p className="text-xs font-semibold">{s.label}</p>
+                  <p className="text-xs text-muted-foreground">{s.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
