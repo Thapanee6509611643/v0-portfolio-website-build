@@ -50,7 +50,8 @@ const projects = [
     year: "2025",
     title: "Keeppook Tracker",
     image: "/components/Photos/keep.png",
-    link: "https://github.com/ThaLovelace/KeepTang",
+    link: "/projects/keeppook",  // ← internal detail page
+    dewtailPage: true,
     tag: "Personal Project",
     category: ["Full-Stack Dev", "AI & ML"],
     tools: ["Figma", "Java", "Android Studio"],
@@ -121,7 +122,7 @@ const projects = [
     title: "AI-Based Dementia Screening",
     image: "/components/Photos/vit.png",
     link: "/projects/dcdt-hybrid",  // ← internal detail page
-    detailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
+    dewtailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
     tag: "Senior Project",
     category: ["AI & ML", "Full-Stack Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
