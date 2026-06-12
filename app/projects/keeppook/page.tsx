@@ -125,7 +125,7 @@ const content = {
     tagline: "แอปบันทึกรายจ่ายที่จัดหมวดหมู่ให้อัตโนมัติ ก่อนที่คุณจะต้องคิด",
 
     links: {
-      github: "https://github.com/ThaLovelace/Keeppook",
+      github: "https://github.com/ThaLovelace/KeepTang",
       demo: "",
     },
 
