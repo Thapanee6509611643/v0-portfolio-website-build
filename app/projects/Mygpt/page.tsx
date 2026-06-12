@@ -59,6 +59,15 @@ const content = {
     },
 
     connection: "The patterns learned here — API integration, prompt structuring, async handling — became the foundation for the AI features in dCDT and Keeppook.",
+
+    screenshots: {
+      title: "App Screens",
+      screens: [
+        { image: "" as string, label: "Landing Page", desc: "Landing page and login" },
+        { image: "" as string, label: "Chat Interface", desc: "Conversation UI with message history" },
+        { image: "" as string, label: "Image Generation", desc: "ImageKit image handling within the chat" },
+      ],
+    },
   },
 
   th: {
