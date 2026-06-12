@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowLeft, Github } from "lucide-react"
+import { ArrowLeft, Github, ExternalLink } from "lucide-react"
 
 // ============================================================
 //  ✏️  CONTENT — แก้ข้อมูลทั้งหมดที่นี่ที่เดียว
@@ -17,7 +17,7 @@ const content = {
 
     links: {
       github: "https://github.com/ThaLovelace/MyGPT",
-      demo: "",
+      demo: "https://my-gpt-beta-pearl.vercel.app/",
     },
 
     statusTag: "Personal Experiment",
@@ -69,7 +69,7 @@ const content = {
 
     links: {
       github: "https://github.com/ThaLovelace/MyGPT",
-      demo: "",
+      demo: "https://my-gpt-beta-pearl.vercel.app/",
     },
 
     statusTag: "Personal Experiment",
@@ -111,6 +111,15 @@ const content = {
     },
 
     connection: "Pattern ที่เรียนรู้ที่นี่ — การเชื่อมต่อ API, การจัดโครงสร้าง Prompt, การจัดการ Async — กลายเป็นพื้นฐานของฟีเจอร์ AI ใน dCDT และ Keeppook",
+
+    screenshots: {
+      title: "หน้าตาของแอป",
+      screens: [
+        { image: "" as string, label: "Landing Page", desc: "หน้าแรกและการเข้าสู่ระบบ" },
+        { image: "" as string, label: "Chat Interface", desc: "UI การสนทนาพร้อมประวัติข้อความ" },
+        { image: "" as string, label: "Image Generation", desc: "การจัดการรูปภาพใน Chat ด้วย ImageKit" },
+      ],
+    },
   },
 }
 
@@ -181,6 +190,12 @@ export default function MyGPTPage() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mt-6">
+            {c.links.demo && (
+              <a href={c.links.demo} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-xl hover:bg-foreground/85 transition-colors">
+                <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+              </a>
+            )}
             {c.links.github && (
               <a href={c.links.github} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm font-medium rounded-xl text-muted-foreground hover:text-foreground hover:border-foreground transition-colors">
@@ -188,6 +203,36 @@ export default function MyGPTPage() {
               </a>
             )}
           </motion.div>
+        </motion.section>
+
+        {/* ── Screenshots ── */}
+        <motion.section
+          className="py-10 border-b border-border"
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">App Screens</motion.p>
+          <motion.h2 variants={fadeUp} className="font-serif text-2xl font-bold mb-8">{c.screenshots.title}</motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {c.screenshots.screens.map((s) => (
+              <motion.div key={s.label} variants={fadeUp} className="flex flex-col gap-3">
+                {s.image ? (
+                  <img src={s.image} alt={s.label} className="w-full rounded-2xl border border-border object-cover aspect-video" />
+                ) : (
+                  <div className="w-full rounded-2xl bg-muted border border-dashed border-border aspect-video flex flex-col items-center justify-center gap-2 text-muted-foreground">
+                    <span className="text-2xl">🖥</span>
+                    <p className="text-xs font-medium">{s.label}</p>
+                    <p className="text-xs opacity-50">ใส่ path รูป Screenshot</p>
+                  </div>
+                )}
+                <div>
+                  <p className="text-sm font-semibold">{s.label}</p>
+                  <p className="text-xs text-muted-foreground">{s.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         {/* ── Why I built this ── */}
