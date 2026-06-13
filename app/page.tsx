@@ -61,7 +61,8 @@ const projects = [
     year: "2025",
     title: "QuickStay Hotel Booking",
     image: "/components/Photos/hotel.png",
-    link: "https://quickstay-blond.vercel.app/", // 
+    link: "/projects/Quickstay",  // ← internal detail page
+    dewtailPage: true,
     tag: "Development",
     category: ["Full-Stack Dev"],
     tools: ["React", "Node.js", "MongoDB"],
