@@ -46,7 +46,7 @@ const content = {
       label: "Static Analysis",
       title: "What the drawing looks like",
       // ใส่ path รูป Heatmap ได้ที่นี่ เช่น "/components/Photos/dcdt-heatmap.png"
-      image: "public/components/dcdt-hybrid/XAI Heatmap.png" as string,
+      image: "/components/dcdt-hybrid/XAI Heatmap.png" as string,
       imageLabel: "XAI Heatmap — regions influencing prediction",
       body: "ViT-B/16 classifies the completed clock drawing. Chefer's Gradient×Attention method then generates a heatmap that highlights exactly which regions drove the model's decision, making the output clinically interpretable.",
     },
@@ -54,7 +54,7 @@ const content = {
       label: "Process Analysis",
       title: "How the drawing was made",
       // ใส่ path รูป Velocity profile ได้ที่นี่
-      image: "public/components/dcdt-hybrid/Velocity profile.png" as string,
+      image: "/components/dcdt-hybrid/Velocity profile.png" as string,
       imageLabel: "Velocity profile across stroke timeline",
       body: "Five digital biomarkers are extracted from millisecond-precision stylus data. Each threshold is dynamically adjusted by age group — because a 70-year-old drawing slowly is not the same signal as a 40-year-old doing the same.",
     },
