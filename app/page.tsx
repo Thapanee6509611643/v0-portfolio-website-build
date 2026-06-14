@@ -54,7 +54,7 @@ const projects = [
     link: "/projects/keeppook",  // ← internal detail page
     dewtailPage: true,
     tag: "Personal Project",
-    category: ["Full-Stack Dev", "AI & ML"],
+    category: ["Software Dev", "AI & ML"],
     tools: ["Figma", "Java", "Android Studio"],
   },
   {
@@ -65,7 +65,7 @@ const projects = [
     link: "/projects/Quickstay",  // ← internal detail page
     dewtailPage: true,
     tag: "Development",
-    category: ["Full-Stack Dev"],
+    category: ["Software Dev"],
     tools: ["React", "Node.js", "MongoDB"],
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     link: "/projects/Ledlight",
     dewtailPage: true,
     tag: "Client Work",
-    category: ["UX/UI Design", "Full-Stack Dev"],
+    category: ["UX/UI Design", "Software Dev"],
     tools: ["Figma", "Next.js", "TailwindCSS"],
   },
   {
@@ -97,7 +97,7 @@ const projects = [
     link: "/projects/Mygpt",
     dewtailPage: true,
     tag: "Development",
-    category: ["Full-Stack Dev", "AI & ML"],
+    category: ["Software Dev", "AI & ML"],
     tools: ["React", "Gemini API"],
   },
   {
@@ -128,12 +128,12 @@ const projects = [
     link: "/projects/dcdt-hybrid",  // ← internal detail page
     dewtailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
     tag: "Senior Project",
-    category: ["AI & ML", "Full-Stack Dev"],
+    category: ["AI & ML", "Software Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
   }
 ]
 
-const categories = ["All", "UX/UI Design", "Full-Stack Dev", "AI & ML"]
+const categories = ["All", "UX/UI Design", "Software Dev", "AI & ML"]
 
 // --- ฟังก์ชันช่วยเหลือสำหรับ Smooth Scroll ---
 const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string, closeMenu?: () => void) => {
