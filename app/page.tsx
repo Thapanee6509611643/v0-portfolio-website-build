@@ -10,7 +10,8 @@ const projects = [
     year: "2024",
     title: "POS Fast Food System",
     image: "/components/Photos/POS Fast Food System.png",
-    link: "https://www.figma.com/proto/FMSSnmpmhx5lJOaAWyuwOs/CS251-POS?node-id=46-10&t=pY2vkzAG4L2ismrK-1&scaling=contain&content-scaling=fixed&page-id=46%3A4&starting-point-node-id=46%3A10&show-proto-sidebar=1", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "/projects/Pos fastfood",  // ← internal detail page
+    dewtailPage: true,
     tag: "University Project",
     category: ["UX/UI Design"],
     tools: ["Figma", "User Research"],
