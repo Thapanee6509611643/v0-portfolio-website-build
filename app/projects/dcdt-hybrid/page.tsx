@@ -24,7 +24,7 @@ const content = {
 
     // ── Hero image ──────────────────────────────────────────
     // ใส่ path รูปจริงเพื่อแทน placeholder เช่น "/components/Photos/dcdt-hero.png"
-    heroImage: "" as string,
+    heroImage: "/components/Photos/vit.png" as string,
 
     // ── Metrics (แสดงเด่นๆ ด้านบน) ──────────────────────────
     metrics: [
