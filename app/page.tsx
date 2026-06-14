@@ -74,7 +74,8 @@ const projects = [
     year: "2025",
     title: "Restaurant POS Redesign",
     image: "/components/Photos/pos.png",
-    link: "https://www.figma.com/proto/GRQK7epOLpNmuCvd5eklM2/POS?node-id=45-583&t=5R61Oa69OgIlMQkt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=197%3A6329", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "/projects/Pos redesign",  // ← internal detail page
+    dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Component Design"],
