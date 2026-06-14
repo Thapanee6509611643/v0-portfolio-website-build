@@ -63,9 +63,9 @@ const content = {
     screenshots: {
       title: "App Screens",
       screens: [
-        { image: "" as string, label: "Landing Page", desc: "Landing page and login" },
-        { image: "" as string, label: "Chat Interface", desc: "Conversation UI with message history" },
-        { image: "" as string, label: "Image Generation", desc: "ImageKit image handling within the chat" },
+        { image: "/components/MyGPT/Screenshot 2026-06-14 181719.png" as string, label: "Landing Page", desc: "Landing page and login" },
+        { image: "/components/MyGPT/Screenshot 2026-06-14 181753.png" as string, label: "Chat Interface", desc: "Conversation UI with message history" },
+        { image: "/components/MyGPT/Screenshot 2026-06-14 182043.png" as string, label: "Image Generation", desc: "ImageKit image handling within the chat" },
       ],
     },
   },
