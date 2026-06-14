@@ -21,7 +21,8 @@ const projects = [
     year: "2024",
     title: "TU Party Mobile App",
     image: "/components/Photos/tu.png",
-    link: "https://www.figma.com/proto/7pGnu6YksgvXzW1t9IbTTt/CS384_Prototype?node-id=24-409&t=KXlUYJU8h2Xzj0Ja-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A409", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "/projects/Tuparty",  // ← internal detail page
+    dewtailPage: true,
     tag: "University Project",
     category: ["UX/UI Design"],
     tools: ["Figma", "Prototyping"],
