@@ -35,7 +35,7 @@ const content = {
     ],
 
     // ── Overview ─────────────────────────────────────────────
-    overview: `Traditional Clock Drawing Tests score only the finished image — but two identical-looking clocks can tell completely different stories depending on how they were drawn. dCDT-Hybrid captures both dimensions simultaneously: what the drawing looks like, and how it was produced.`,
+    overview: `Traditional Clock Drawing Tests score only the finished image — but two identical-looking clocks can tell completely different stories depending on how they were drawn. dCDT-Hybrid captures both dimensions simultaneously: what the drawing looks like, and how it was produced — and shows exactly which signals led to that result.`,
 
     // ── Tech tags ────────────────────────────────────────────
     tags: ["Vision Transformer", "Digital Biomarkers", "Explainable AI", "Next.js", "FastAPI", "Python"],
@@ -43,8 +43,8 @@ const content = {
 
     // ── Two dimensions ───────────────────────────────────────
     dim1: {
-      label: "Static Analysis",
-      title: "What the drawing looks like",
+      label: "Explainable Analysis",
+      title: "What the drawing looks like — and why",
       // ใส่ path รูป Heatmap ได้ที่นี่ เช่น "/components/Photos/dcdt-heatmap.png"
       image: "/components/dcdt-hybrid/XAI Heatmap.png" as string,
       imageLabel: "XAI Heatmap — regions influencing prediction",
@@ -127,14 +127,14 @@ const content = {
       { value: "0.926",  label: "AUC" },
     ],
 
-    overview: `การทดสอบวาดนาฬิกาแบบดั้งเดิมประเมินเฉพาะภาพที่วาดเสร็จ แต่นาฬิกาที่ดูเหมือนกันสองเรือน อาจมาจากกระบวนการวาดที่บ่งชี้สภาวะต่างกันโดยสิ้นเชิง dCDT-Hybrid วิเคราะห์ทั้งสองมิติพร้อมกัน: ผลลัพธ์ของภาพ และกระบวนการที่ใช้สร้างภาพนั้น`,
+    overview: `การทดสอบวาดนาฬิกาแบบดั้งเดิมประเมินเฉพาะภาพที่วาดเสร็จ แต่นาฬิกาที่ดูเหมือนกันสองเรือน อาจมาจากกระบวนการวาดที่บ่งชี้สภาวะต่างกันโดยสิ้นเชิง dCDT-Hybrid วิเคราะห์ทั้งสองมิติพร้อมกัน: ผลลัพธ์ของภาพ และกระบวนการที่ใช้สร้างภาพนั้น พร้อมแสดงให้เห็นว่าสัญญาณใดที่นำไปสู่ผลลัพธ์นั้น`,
 
     tags: ["Vision Transformer", "Digital Biomarkers", "Explainable AI", "Next.js", "FastAPI", "Python"],
     statusTag: "IEEE — อยู่ระหว่างพิจารณา",
 
     dim1: {
-      label: "วิเคราะห์ภาพนิ่ง",
-      title: "ภาพวาดที่ได้ออกมาเป็นอย่างไร",
+      label: "วิเคราะห์ภาพแบบอธิบายได้",
+      title: "ภาพวาดที่ได้ออกมาเป็นอย่างไร — และเพราะอะไร",
       image: "" as string,
       imageLabel: "XAI Heatmap — บริเวณที่ส่งผลต่อการทำนาย",
       body: "ViT-B/16 จำแนกภาพวาดนาฬิกาที่วาดเสร็จ จากนั้น Chefer's Gradient×Attention สร้าง Heatmap แสดงบริเวณที่ส่งผลต่อการตัดสินใจของโมเดล เพื่อให้ผลลัพธ์ตีความได้ในเชิงคลินิก",
