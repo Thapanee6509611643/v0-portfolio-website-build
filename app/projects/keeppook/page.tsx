@@ -16,7 +16,7 @@ const content = {
     tagline: "A finance tracker that categorizes your spending before you even think about it.",
 
     links: {
-      github: "https://github.com/ThaLovelace/Keeppook",
+      github: "https://github.com/ThaLovelace/KeepTang.git",
       demo: "",
     },
 
