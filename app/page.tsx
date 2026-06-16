@@ -117,7 +117,8 @@ const projects = [
     year: "2025",
     title: "F&B Dash: Hotel Analytics",
     image: "/components/Photos/fs.png",
-    link: "https://www.figma.com/proto/KI4Kqu7p4ahZpnaq6eTjQD/DASH--by-FS-?node-id=572-4798&t=prEUzpFtioRBJr9Q-1&scaling=contain&content-scaling=fixed&page-id=189%3A8134&starting-point-node-id=572%3A4798",
+    link: "/projects/F&B",  // ← internal detail page
+    dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Data Visualization"],
