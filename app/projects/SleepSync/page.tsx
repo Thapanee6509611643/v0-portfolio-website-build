@@ -17,13 +17,13 @@ const content = {
     tagline: "Started from a real problem I live with every day. Ended with a validated solution that 3 real users could actually use.",
     statusTag: "Freelance · Figma Prototype · Usability Tested",
     tags: ["Figma", "UX Research", "Usability Testing", "Prototyping"],
-    figmaLink: "", // 🔗 ใส่ link Figma ที่นี่
-    heroImage: "" as string, // 🖼 Cover.png
+    figmaLink: "https://www.figma.com/proto/IX1l1vaCmnkBeQezIiTzak/Sleep-Sync-App?node-id=180-3969&t=at5HW1yULMWKPHZC-1&scaling=scale-down&content-scaling=fixed&page-id=50%3A1926&starting-point-node-id=180%3A3969&show-proto-sidebar=1", // 🔗 ใส่ link Figma ที่นี่
+    heroImage: "/components/Photos/sleep.png" as string, // 🖼 Cover.png
 
     problemTitle: "The Problem",
     problemBody: "The brief was to design an app that solves a real student problem. We chose sleep — because it's a problem we actually live with.",
     problemDetail: "Students don't sleep less because they don't know they should. They sleep less because their schedules are unpredictable — group work today, exam tomorrow, doom-scrolling at 2am. Existing sleep apps solve tracking. None of them help you plan sleep around your actual student life.",
-    problemImage: "" as string, // 🖼 Presentation slide "Problem"
+    problemImage: "/components/SleepSync/Problem Slide.png" as string, // 🖼 Presentation slide "Problem"
     problemImageLabel: "Problem Slide",
 
     researchTitle: "Research",
@@ -49,7 +49,7 @@ const content = {
         gap: "Calm, Sleep Cycle, and Pzizz all share the same gap: none of them link sleep to academic schedules. That's Sleep Sync's unique value.",
       },
     ],
-    researchImage: "" as string, // 🖼 Research slide
+    researchImage: "/components/SleepSync/Research & Insights Slide.png" as string, // 🖼 Research slide
     researchImageLabel: "Research & Insights Slide",
 
     personaTitle: "Persona",
@@ -61,21 +61,21 @@ const content = {
       "Finds existing apps too generic for her actual life",
     ],
     personaInsight: "May drove every design decision throughout the project. If a feature didn't help May, it didn't belong in the app.",
-    personaImage: "" as string, // 🖼 Persona / Design Decisions slide
+    personaImage: "/components/SleepSync/User-Centered Design Decisions Slide.png" as string, // 🖼 Persona / Design Decisions slide
     personaImageLabel: "User-Centered Design Decisions Slide",
 
     lofiTitle: "Lo-Fi → Hi-Fi",
     lofiIntro: "Started with lo-fi wireframes across all 5 screens to validate structure and flow before committing to any visual decisions.",
     lofiScreens: [
-      { label: "Home", image: "" as string },        // 🖼 Lo-fi Home
-      { label: "Check-In", image: "" as string },     // 🖼 Lo-fi Check-In
-      { label: "Planner", image: "" as string },      // 🖼 Lo-fi Planner
-      { label: "Planner Calendar", image: "" as string }, // 🖼 Lo-fi Planner-1
-      { label: "Insights", image: "" as string },     // 🖼 Lo-fi Insights
+      { label: "Home", image: "/components/SleepSync/Low Fi/Home.png" as string },        // 🖼 Lo-fi Home
+      { label: "Check-In", image: "/components/SleepSync/Low Fi/Check-In.png" as string },     // 🖼 Lo-fi Check-In
+      { label: "Planner", image: "/components/SleepSync/Low Fi/Planner.png" as string },      // 🖼 Lo-fi Planner
+      { label: "Planner Calendar", image: "/components/SleepSync/Low Fi/Planner-1.png" as string }, // 🖼 Lo-fi Planner-1
+      { label: "Insights", image: "/components/SleepSync/Low Fi/Insights.png" as string },     // 🖼 Lo-fi Insights
     ],
     lofiToHifi: "From lo-fi to hi-fi, what changed wasn't just color — it was intentional visual decisions at every level.",
     visualSystem: "Dark navy + purple + pink creates a calming, premium feel — not aggressive. Right for an app used right before sleep. Gamification elements like streak badges and sleep score circles add motivation without making the app feel like a game.",
-    visualImage: "" as string, // 🖼 Visual System slide
+    visualImage: "/components/SleepSync/Visual System Slide.png" as string, // 🖼 Visual System slide
     visualImageLabel: "Visual System Slide",
 
     featuresTitle: "4 Core Features",
@@ -84,7 +84,7 @@ const content = {
         key: "01",
         name: "Smart Sleep Planner",
         desc: "Input your class schedule. The system automatically suggests the optimal bedtime and wake-up time. This feature doesn't exist in any competing app.",
-        image: "" as string, // 🖼 Hi-fi Planner.png
+        image: "/components/SleepSync/Hi Fi/Smart Sleep Planner.png" as string, // 🖼 Hi-fi Planner.png
         imageLabel: "Smart Sleep Planner — Hi-Fi",
         color: "purple",
         highlight: true,
@@ -93,7 +93,7 @@ const content = {
         key: "02",
         name: "Daily Check-In",
         desc: "Log wake-up time and mood with emoji. Takes under 30 seconds — minimum friction. A Last Log Summary card provides continuity so you always know where you left off.",
-        image: "" as string, // 🖼 Hi-fi Check-In.png
+        image: "/components/SleepSync/Hi Fi/Daily Check-In.png" as string, // 🖼 Hi-fi Check-In.png
         imageLabel: "Daily Check-In — Hi-Fi",
         color: "green",
         highlight: false,
@@ -102,7 +102,7 @@ const content = {
         key: "03",
         name: "Insights Dashboard",
         desc: "Weekly Sleep Score, Sleep Consistency metrics, Mood Correlation chart, and Achievement badges — showing students exactly how consistent sleep affects their mood over time.",
-        image: "" as string, // 🖼 Hi-fi Insights.png
+        image: "/components/SleepSync/Hi Fi/Insights Dashboard.png" as string, // 🖼 Hi-fi Insights.png
         imageLabel: "Insights Dashboard — Hi-Fi",
         color: "purple",
         highlight: false,
@@ -111,7 +111,7 @@ const content = {
         key: "04",
         name: "Reminders",
         desc: "Bedtime alerts that directly address procrastination — the pain point most frequently mentioned in user interviews.",
-        image: "" as string,
+        image: "/components/SleepSync/Hi Fi/Reminders.png" as string,
         imageLabel: "Reminders Feature",
         color: "green",
         highlight: false,
@@ -138,7 +138,7 @@ const content = {
         color: "orange",
       },
     ],
-    testingImage: "" as string, // 🖼 Usability Testing slide
+    testingImage: "/components/SleepSync/Usability Testing Slide.png" as string, // 🖼 Usability Testing slide
     testingImageLabel: "Usability Testing Slide",
 
     lessonsTitle: "What I Learned",
