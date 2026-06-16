@@ -22,7 +22,7 @@ const content = {
     overviewTitle: "The Brief",
     overview: "The client had an existing PowerBI mockup but wanted a dashboard that looked better and made data easier to read — for cafe managers who need to monitor sales, costs, and customer behavior in one place.",
     overviewDetail: "This wasn't like any UI project I'd done before. The challenge wasn't just aesthetics — it was how to make complex data readable in seconds. And there was a 3-day deadline. My first real dashboard, no time for trial and error. Every decision had to be right from the start.",
-    overviewImage: "" as string, // 🖼 Dashboard.png
+    overviewImage: "/components/Photos/fs.png" as string, // 🖼 Dashboard.png
 
     screensTitle: "5 Screens, 4 Roles",
     screens: [
@@ -30,7 +30,7 @@ const content = {
         key: "01",
         name: "Login",
         desc: "Clean and minimal, with SSO support via Google and Microsoft — designed for enterprise users who expect seamless, credential-free entry.",
-        image: "" as string, // 🖼 Log-in.png
+        image: "/components/F&B/Log-in.png" as string, // 🖼 Log-in.png
         imageLabel: "Login Screen",
         color: "purple",
       },
@@ -38,7 +38,7 @@ const content = {
         key: "02",
         name: "Dashboard — Overview",
         desc: "Six KPI cards at the top (Revenue, Orders, Customers, Average Check, Cost, Gross Profit%) give managers an instant snapshot. Below: Revenue vs Cost line chart, Top Categories bar chart, and Order Type + Customer Type donut charts.",
-        image: "" as string, // 🖼 Dashboard.png
+        image: "/components/F&B/Dashboard.png" as string, // 🖼 Dashboard.png
         imageLabel: "Dashboard Overview",
         color: "green",
       },
@@ -46,7 +46,7 @@ const content = {
         key: "03",
         name: "Dashboard — First-time User",
         desc: "A version for new users with no data yet. Instead of showing empty charts (which look broken and confusing), it surfaces a Quick Start Tour, Documentation, and Help panel — so users know exactly what to do next.",
-        image: "" as string, // 🖼 Dashboard-2.png
+        image: "/components/F&B/Dashboard-2.png" as string, // 🖼 Dashboard-2.png
         imageLabel: "First-time User State",
         color: "orange",
       },
@@ -54,7 +54,7 @@ const content = {
         key: "04",
         name: "Analysis",
         desc: "The screen that required the most thinking. Features a Table Occupancy Heatmap, Cost vs Revenue by Category, and Contribution Margin by Menu Items — each chosen to answer a specific decision managers need to make.",
-        image: "" as string, // 🖼 Analysis.png
+        image: "/components/F&B/Analysis.png" as string, // 🖼 Analysis.png
         imageLabel: "Analysis Screen",
         color: "green",
       },
@@ -62,7 +62,7 @@ const content = {
         key: "05",
         name: "Upload",
         desc: "Three ways to import data: Excel/CSV, Cloud Storage, and Download Template. Designed to be as frictionless as possible — because if uploading is hard, the whole dashboard becomes useless.",
-        image: "" as string, // 🖼 Upload.png
+        image: "/components/F&B/Upload.png" as string, // 🖼 Upload.png
         imageLabel: "Upload Screen",
         color: "purple",
       },
@@ -76,7 +76,7 @@ const content = {
     heatmapBeforeDesc: "Tells you which day sells the most. One dimension only.",
     heatmapAfter: "Heatmap answer",
     heatmapAfterDesc: "X-axis: time (10am–9pm). Y-axis: day of week. Dark = busy, light = quiet. Managers see instantly that Friday–Sunday 5pm–9pm is peak time — without reading a single number.",
-    heatmapImage: "" as string, // 🖼 Analysis.png — heatmap crop
+    heatmapImage: "/components/F&B/Table Occupancy Heatmap.png" as string, // 🖼 Analysis.png — heatmap crop
     heatmapImageLabel: "Table Occupancy Heatmap",
     heatmapConclusion: "Choosing the Heatmap wasn't because it looks better. It was because it answers the right question. That's the difference between data visualization and data decoration.",
 
