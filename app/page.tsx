@@ -42,7 +42,8 @@ const projects = [
     year: "2025",
     title: "Aom Tang Web App",
     image: "/components/Photos/Aomtang.png",
-    link: "https://www.figma.com/proto/CWZ1io1xgBnCCDJ9oz2zPF/%F0%9F%92%B0-%E0%B8%AD%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B1%E0%B8%87-(OmTang)?node-id=215-717&t=wg0MzQANwg3IXHmU-1&scaling=contain&content-scaling=fixed&page-id=0%3A1", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "/projects/Aomtang",  // ← internal detail page
+    dewtailPage: true,
     tag: "Personal Project",
     category: ["UX/UI Design"],
     tools: ["Figma", "Minimalist UI"],
@@ -107,7 +108,8 @@ const projects = [
     year: "2025",
     title: "Sleep Sync",
     image: "/components/Photos/sleep.png",
-    link: "https://www.figma.com/proto/IX1l1vaCmnkBeQezIiTzak/Sleep-Sync-App?node-id=145-1610&starting-point-node-id=180%3A3969&t=NdYxrPQp3URtdJEz-1", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "/projects/SleepSync",  // ← internal detail page
+    dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Usability Testing"],
