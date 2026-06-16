@@ -232,13 +232,11 @@ function Hero() {
               I'm Som-o!
             </h1>
 
-            {/* ── UPDATED: Headline & Sub-headline ── */}
-            <p className="mt-6 text-lg md:text-xl font-semibold max-w-2xl mx-auto leading-relaxed">
-              I build AI — and make sure people can actually use it.
-            </p>
-            <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              CS grad with a design background. I care less about a model that just performs well,
-              and more about one that can explain why — and that people can trust.
+            {/* ── UPDATED: Headline ── */}
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              I build AI, then make sure people can actually use it. I'm a CS grad with a design
+              background, and I care more about whether a model can explain its decisions than
+              whether it scores well on paper.
             </p>
 
             <motion.div
