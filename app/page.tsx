@@ -10,7 +10,7 @@ const projects = [
     year: "2024",
     title: "POS Fast Food System",
     image: "/components/Photos/POS Fast Food System.png",
-    link: "/projects/Pos fastfood",  // ← internal detail page
+    link: "/projects/Pos fastfood",
     dewtailPage: true,
     tag: "University Project",
     category: ["UX/UI Design"],
@@ -21,7 +21,7 @@ const projects = [
     year: "2024",
     title: "TU Party Mobile App",
     image: "/components/Photos/tu.png",
-    link: "/projects/Tuparty",  // ← internal detail page
+    link: "/projects/Tuparty",
     dewtailPage: true,
     tag: "University Project",
     category: ["UX/UI Design"],
@@ -32,7 +32,7 @@ const projects = [
     year: "2024",
     title: "Cal Control App",
     image: "/components/Photos/control.png",
-    link: "https://www.figma.com/proto/6xq067fpFHY2lWS0UIPLus/Cal-Control?node-id=463-2055&t=y6yB2gtRuL5zNH0K-1&scaling=min-zoom&content-scaling=fixed&page-id=156%3A593&starting-point-node-id=156%3A640", // <--- เพิ่มบรรทัดนี้เข้าไป
+    link: "https://www.figma.com/proto/6xq067fpFHY2lWS0UIPLus/Cal-Control?node-id=463-2055&t=y6yB2gtRuL5zNH0K-1&scaling=min-zoom&content-scaling=fixed&page-id=156%3A593&starting-point-node-id=156%3A640",
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Interaction Design"],
@@ -42,7 +42,7 @@ const projects = [
     year: "2025",
     title: "Aom Tang Web App",
     image: "/components/Photos/Aomtang.png",
-    link: "/projects/Aomtang",  // ← internal detail page
+    link: "/projects/Aomtang",
     dewtailPage: true,
     tag: "Personal Project",
     category: ["UX/UI Design"],
@@ -53,7 +53,7 @@ const projects = [
     year: "2025",
     title: "Keeppook Tracker",
     image: "/components/Photos/keep.png",
-    link: "/projects/keeppook",  // ← internal detail page
+    link: "/projects/keeppook",
     dewtailPage: true,
     tag: "Personal Project",
     category: ["Software Dev", "AI & ML"],
@@ -64,7 +64,7 @@ const projects = [
     year: "2025",
     title: "QuickStay Hotel Booking",
     image: "/components/Photos/hotel.png",
-    link: "/projects/Quickstay",  // ← internal detail page
+    link: "/projects/Quickstay",
     dewtailPage: true,
     tag: "Development",
     category: ["Software Dev"],
@@ -75,7 +75,7 @@ const projects = [
     year: "2025",
     title: "Restaurant POS Redesign",
     image: "/components/Photos/pos.png",
-    link: "/projects/Pos redesign",  // ← internal detail page
+    link: "/projects/Pos redesign",
     dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
@@ -108,7 +108,7 @@ const projects = [
     year: "2025",
     title: "Sleep Sync",
     image: "/components/Photos/sleep.png",
-    link: "/projects/SleepSync",  // ← internal detail page
+    link: "/projects/SleepSync",
     dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
@@ -119,28 +119,31 @@ const projects = [
     year: "2025",
     title: "F&B Dash: Hotel Analytics",
     image: "/components/Photos/fs.png",
-    link: "/projects/F&B",  // ← internal detail page
+    link: "/projects/F&B",
     dewtailPage: true,
     tag: "Client Work",
     category: ["UX/UI Design"],
     tools: ["Figma", "Data Visualization"],
   },
- {
+  {
     id: "12",
     year: "2026",
     title: "AI-Based Dementia Screening",
     image: "/components/Photos/vit.png",
-    link: "/projects/dcdt-hybrid",  // ← internal detail page
-    dewtailPage: true,                // ← ใช้ Next Link แทน <a target="_blank">
+    link: "/projects/dcdt-hybrid",
+    dewtailPage: true,
     tag: "Senior Project",
     category: ["AI & ML", "Software Dev"],
     tools: ["Python", "Vision Transformer", "FastAPI"],
+    // ── Featured card flag ──
+    featured: true,
+    featuredTagline: "Automated cognitive screening that sees both the drawing and the act of drawing.",
+    featuredMetric: "96.14% Accuracy",
   }
 ]
 
 const categories = ["All", "UX/UI Design", "Software Dev", "AI & ML"]
 
-// --- ฟังก์ชันช่วยเหลือสำหรับ Smooth Scroll ---
 const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string, closeMenu?: () => void) => {
   e.preventDefault()
   const element = document.getElementById(id)
@@ -156,41 +159,26 @@ function Navigation() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           onClick={(e) => scrollToSection(e, "home")}
           className="font-serif text-2xl font-bold tracking-tight cursor-pointer"
         >
           Thapanee.
         </a>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#home" onClick={(e) => scrollToSection(e, "home")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-            Home
-          </a>
-          <a href="#projects" onClick={(e) => scrollToSection(e, "projects")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-            Projects
-          </a>
-          <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-            About Me
-          </a>
-          <a href="#contact" onClick={(e) => scrollToSection(e, "contact")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-            Contact
-          </a>
+          <a href="#home" onClick={(e) => scrollToSection(e, "home")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Home</a>
+          <a href="#projects" onClick={(e) => scrollToSection(e, "projects")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Projects</a>
+          <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">About Me</a>
+          <a href="#contact" onClick={(e) => scrollToSection(e, "contact")} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Contact</a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2"
-          aria-label="Toggle menu"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 -mr-2" aria-label="Toggle menu">
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </nav>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -200,18 +188,10 @@ function Navigation() {
             className="md:hidden border-t border-border bg-background overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
-              <a href="#home" onClick={(e) => scrollToSection(e, "home", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">
-                Home
-              </a>
-              <a href="#projects" onClick={(e) => scrollToSection(e, "projects", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">
-                Projects
-              </a>
-              <a href="#about" onClick={(e) => scrollToSection(e, "about", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">
-                About Me
-              </a>
-              <a href="#contact" onClick={(e) => scrollToSection(e, "contact", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">
-                Contact
-              </a>
+              <a href="#home" onClick={(e) => scrollToSection(e, "home", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="#projects" onClick={(e) => scrollToSection(e, "projects", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, "about", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">About Me</a>
+              <a href="#contact" onClick={(e) => scrollToSection(e, "contact", () => setIsOpen(false))} className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             </div>
           </motion.div>
         )}
@@ -220,6 +200,7 @@ function Navigation() {
   )
 }
 
+// ── UPDATED: Hero section ──────────────────────────────────────────────────────
 function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -237,28 +218,29 @@ function Hero() {
                 src="/components/Photos/me1.jpg"
                 alt="Som-o"
                 className="
-                  inline-block 
+                  inline-block
                   w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28
-                  object-cover mx-3 align-middle 
-                  border-2 border-white rounded-xl shadow-md 
+                  object-cover mx-3 align-middle
+                  border-2 border-white rounded-xl shadow-md
                   rotate-[-5deg]
-                  
                   transition-all duration-300 ease-out
-                  hover:scale-125 hover:rotate-0 hover:shadow-xl   /* desktop */
-                  active:scale-110                                 /* mobile tap */
+                  hover:scale-125 hover:rotate-0 hover:shadow-xl
+                  active:scale-110
                   cursor-pointer
                 "
               />
               I'm Som-o!
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I turn complex logic into beautiful, user-friendly experiences. 
-              <br />
-              As a Computer Science student with a designer's eye, 
-              I build digital products that don't just work flawlessly behind the scenes, 
-              <br />
-              but look amazing on the screen
+
+            {/* ── UPDATED: Headline & Sub-headline ── */}
+            <p className="mt-6 text-lg md:text-xl font-semibold max-w-2xl mx-auto leading-relaxed">
+              I build AI — and make sure people can actually use it.
             </p>
+            <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              CS grad with a design background. I care less about a model that just performs well,
+              and more about one that can explain why — and that people can trust.
+            </p>
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -266,7 +248,7 @@ function Hero() {
               className="mt-12"
             >
               <button
-                onClick={(e) => {
+                onClick={() => {
                   const el = document.getElementById("projects")
                   el?.scrollIntoView({ behavior: "smooth" })
                 }}
@@ -309,28 +291,22 @@ function FilterButtons({
   )
 }
 
+// ── UPDATED: ProjectCard — supports featured (wide) card ──────────────────────
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   const isDetailPage = (project as any).detailPage === true
+  const isFeatured = (project as any).featured === true
 
-  // Wrapper: ถ้ามี detail page ใช้ Link ครอบทั้ง card
-  // ถ้าเป็น external link ใช้ <a> ครอบ (เหมือนเดิม)
-  // ถ้าไม่มีลิงค์เลย ใช้ <article> ธรรมดา
   const CardWrapper = ({ children }: { children: React.ReactNode }) => {
-    if (isDetailPage) {
+    if (isDetailPage || isFeatured) {
       return (
         <Link href={project.link!} className="group cursor-pointer flex flex-col">
           {children}
         </Link>
       )
     }
-    if (project.link && !isDetailPage) {
+    if (project.link) {
       return (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group cursor-pointer flex flex-col"
-        >
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col">
           {children}
         </a>
       )
@@ -338,6 +314,64 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
     return <div className="group flex flex-col">{children}</div>
   }
 
+  // ── Featured (wide) card layout ──
+  if (isFeatured) {
+    return (
+      <motion.article
+        layout
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.4 }}
+        className="col-span-1 md:col-span-2"
+      >
+        <CardWrapper>
+          <div className="rounded-2xl overflow-hidden border border-border bg-muted/20 grid grid-cols-1 md:grid-cols-2 group">
+            {/* Image */}
+            <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted relative">
+              <img
+                src={project.image || "/placeholder.jpg"}
+                alt={project.title}
+                className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-8 md:p-10 flex flex-col justify-center gap-4">
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{project.tag}</span>
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#FAEEDA] text-[#633806] border border-[#EF9F27]">
+                  {(project as any).featuredMetric}
+                </span>
+              </div>
+
+              <h3 className="font-serif text-2xl md:text-3xl font-bold group-hover:text-muted-foreground transition-colors">
+                {project.title}
+              </h3>
+
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {(project as any).featuredTagline}
+              </p>
+
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-sm text-muted-foreground">{project.year}</span>
+                <span className="text-muted-foreground">·</span>
+                {project.tools.map((tool) => (
+                  <span key={tool} className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground">{tool}</span>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-1">
+                Read Case Study <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </CardWrapper>
+      </motion.article>
+    )
+  }
+
+  // ── Normal card layout ──
   return (
     <motion.article
       layout
@@ -347,7 +381,6 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       transition={{ duration: 0.4 }}
     >
       <CardWrapper>
-        {/* รูปภาพ */}
         <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-muted relative">
           <img
             src={project.image || "/placeholder.jpg"}
@@ -357,25 +390,15 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </div>
 
         <div className="space-y-2 flex-1">
-          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            {project.tag}
-          </span>
-          <h3 className="font-serif text-xl font-bold group-hover:text-muted-foreground transition-colors">
-            {project.title}
-          </h3>
+          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{project.tag}</span>
+          <h3 className="font-serif text-xl font-bold group-hover:text-muted-foreground transition-colors">{project.title}</h3>
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-sm text-muted-foreground">{project.year}</span>
             <span className="text-muted-foreground">·</span>
             {project.tools.slice(0, 2).map((tool) => (
-              <span
-                key={tool}
-                className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
-              >
-                {tool}
-              </span>
+              <span key={tool} className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground">{tool}</span>
             ))}
           </div>
-          {/* "View Project" text ที่ fade in on hover — เฉพาะ card ที่มีลิงค์ */}
           {project.link && (
             <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-2">
               {isDetailPage ? "Read Case Study" : "View Project"} <ArrowRight className="w-4 h-4" />
@@ -391,13 +414,16 @@ function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All")
 
   const filteredProjects = useMemo(() => {
-    // 1. กรองข้อมูลตามหมวดหมู่ก่อน
-    let result = activeFilter === "All" 
-      ? [...projects] 
-      : projects.filter((project) => project.category.includes(activeFilter));
-      
-    // 2. ใช้ .sort() เพื่อเรียงลำดับ id จากมากไปน้อย (เลขเยอะอยู่บน)
-    return result.sort((a, b) => parseInt(b.id) - parseInt(a.id));
+    let result = activeFilter === "All"
+      ? [...projects]
+      : projects.filter((project) => project.category.includes(activeFilter))
+
+    // Featured card (dCDT) always first, then sort rest by id descending
+    return result.sort((a, b) => {
+      if ((a as any).featured) return -1
+      if ((b as any).featured) return 1
+      return parseInt(b.id) - parseInt(a.id)
+    })
   }, [activeFilter])
 
   return (
@@ -426,6 +452,7 @@ function ProjectsSection() {
   )
 }
 
+// ── UPDATED: About section ────────────────────────────────────────────────────
 function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-muted/30">
@@ -440,13 +467,22 @@ function AboutSection() {
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                My journey didn't start with a traditional design background; it started with logic, algorithms, and a Computer Science degree. However, <br/> I quickly realized that the most brilliant code is useless if people can't figure out how to use it. That's when I found my sweet spot: the intersection of UX/UI design and software development.
+                My journey started with logic and algorithms. But the more I worked with AI models,
+                the more I noticed a gap: a model can be 96% accurate and still be useless — if no
+                one can tell why it made that decision, or how to actually use it.
               </p>
               <p>
-                I consider myself a 'Hybrid'. Whether I'm designing a premium dashboard for a client or engineering an AI Vision Transformer to help with medical screening, my goal is always the same: solving real human problems through technology.
+                That gap is where I work best. With dCDT, my senior project, I didn't just train a
+                Vision Transformer to screen for dementia — I built Grad-CAM heatmaps so the AI
+                could explain itself, and an interface so people could actually interact with it.
+                I consider myself a 'Hybrid': someone who builds the model, but also cares about
+                the moment it meets a real person. As an introvert, I spend a lot of time quietly
+                observing how people interact with the things I build — it's part of why I care so
+                much about that final connection.
               </p>
               <p>
-                As an introvert, I spend a lot of time observing how people interact with the digital world. When I'm not designing or debugging, you can find me playing the guitar, listening to my favorite K-pop playlists, or sketching out ideas for my dream cafe in Mae Rim.
+                Outside of that, you'll usually find me playing the guitar, lost in a K-pop
+                playlist, or sketching out ideas for a dream cafe in Mae Rim someday.
               </p>
             </div>
           </motion.div>
@@ -463,15 +499,12 @@ function AboutSection() {
               alt="Som-o"
               className="
                 block mx-auto
-
-                w-48 h-48 
-                md:w-72 md:h-72 
+                w-48 h-48
+                md:w-72 md:h-72
                 lg:w-[420px] lg:h-[420px]
-
-                object-cover 
-                border-4 border-white rounded-2xl shadow-xl 
+                object-cover
+                border-4 border-white rounded-2xl shadow-xl
                 rotate-[-4deg]
-
                 transition-all duration-300 ease-out
                 hover:scale-105 hover:rotate-0 hover:shadow-2xl
                 active:scale-105
@@ -485,6 +518,7 @@ function AboutSection() {
   )
 }
 
+// ── UPDATED: Footer / Contact section ─────────────────────────────────────────
 function Footer() {
   return (
     <footer id="contact" className="py-24 md:py-32">
@@ -497,11 +531,15 @@ function Footer() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
-              Have a project in mind?
+              Open to AI Engineer & Software Developer roles
             </p>
-            <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-12">
-              {"Let's Connect!"}
+            <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              {"Let's build something."}
             </h2>
+            <p className="text-base text-muted-foreground max-w-md mx-auto mb-12 leading-relaxed">
+              I'm looking for teams that move fast and care about what they build.
+              If that sounds like you — I'd love to talk.
+            </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
               <a
@@ -538,28 +576,17 @@ function Footer() {
   )
 }
 
-// --- คอมโพเนนต์ใหม่: ปุ่มลอยตรงกลาง (FAB) ---
 function FloatingContactButton() {
-  // ตั้งค่าเริ่มต้นให้โชว์ปุ่มเสมอ
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-      // ใช้ document.documentElement.scrollHeight เพื่อความแม่นยำของความสูงทั้งหน้า
       const scrollPosition = window.scrollY + window.innerHeight
-      const bottomPosition = document.documentElement.scrollHeight - 100 // ระยะก่อนถึงขอบล่าง 100px
-      
-      // ถ้าเลื่อนมาถึงล่างสุดให้ซ่อน (false) ถ้าไม่ถึงให้โชว์ (true)
-      if (scrollPosition >= bottomPosition) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
-      }
+      const bottomPosition = document.documentElement.scrollHeight - 100
+      setIsVisible(scrollPosition < bottomPosition)
     }
 
     window.addEventListener("scroll", handleScroll)
-    
-    // หน่วงเวลาเช็ก 0.5 วินาที เพื่อให้เว็บเรนเดอร์ความสูงให้เสร็จก่อน
     const timeoutId = setTimeout(handleScroll, 500)
 
     return () => {
@@ -592,14 +619,12 @@ function FloatingContactButton() {
 
 export default function Portfolio() {
   return (
-    // ใส่ id="home" ให้ส่วนบนสุด เพื่อให้ปุ่ม Home กดกลับขึ้นมาได้
     <main id="home" className="min-h-screen scroll-smooth">
       <Navigation />
       <Hero />
       <ProjectsSection />
       <AboutSection />
       <Footer />
-      {/* วางปุ่มลอยไว้ตรงนี้ */}
       <FloatingContactButton />
     </main>
   )
