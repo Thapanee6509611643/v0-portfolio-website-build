@@ -1,7 +1,7 @@
 "use client"
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowDown, ArrowRight, Mail, Linkedin, FileText, Menu, X, ExternalLink} from "lucide-react"
+import { ArrowDown, ArrowRight, Mail, Linkedin, FileText, Menu, X } from "lucide-react"
 import Link from "next/link"
 
 const projects = [
@@ -359,7 +359,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                 ))}
               </div>
 
-              <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-1">
+              <div className="flex items-center gap-1 text-sm font-medium pt-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-muted-foreground md:text-foreground">
                 Read Case Study <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -398,7 +398,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             ))}
           </div>
           {project.link && (
-            <div className="flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity pt-2">
+            <div className="flex items-center gap-1 text-sm font-medium pt-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-muted-foreground md:text-foreground">
               {isDetailPage ? "Read Case Study" : "View Project"} <ArrowRight className="w-4 h-4" />
             </div>
           )}
@@ -574,47 +574,6 @@ function Footer() {
   )
 }
 
-function FloatingContactButton() {
-  const [isVisible, setIsVisible] = useState(true)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight
-      const bottomPosition = document.documentElement.scrollHeight - 100
-      setIsVisible(scrollPosition < bottomPosition)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    const timeoutId = setTimeout(handleScroll, 500)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      clearTimeout(timeoutId)
-    }
-  }, [])
-
-  return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          onClick={(e) => {
-            e.preventDefault()
-            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-          }}
-          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full shadow-2xl hover:bg-foreground/90 transition-all duration-300"
-          aria-label="Let's Connect"
-        >
-          <Mail className="w-4 h-4" />
-          <span className="text-sm font-medium">Let's Connect</span>
-        </motion.button>
-      )}
-    </AnimatePresence>
-  )
-}
-
 export default function Portfolio() {
   return (
     <main id="home" className="min-h-screen scroll-smooth">
@@ -623,7 +582,6 @@ export default function Portfolio() {
       <ProjectsSection />
       <AboutSection />
       <Footer />
-      <FloatingContactButton />
     </main>
   )
 }
