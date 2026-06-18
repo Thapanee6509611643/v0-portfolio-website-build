@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useLang } from "@/context/LangContext"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ExternalLink } from "lucide-react"
@@ -102,7 +102,7 @@ const fadeUp = {
 }
 
 export default function POSFastFoodPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLang()
   const c = content[lang]
 
   return (
@@ -126,7 +126,7 @@ export default function POSFastFoodPage() {
       <main className="max-w-5xl mx-auto px-6 pb-24">
 
         {/* ── Hero ── */}
-        <motion.section className="pt-14 pb-10 border-b border-border"
+        <motion.section key={`sec-1-${lang}`} className="pt-14 pb-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">{c.role} · {c.year}</motion.p>
@@ -151,7 +151,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── Hero Image ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-2-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}>
           {c.heroImage ? (
             <img src={c.heroImage} alt={c.title} className="w-full rounded-2xl border border-border object-cover" />
@@ -165,7 +165,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── The Brief ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-3-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">The Brief</motion.p>
@@ -179,7 +179,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── Starting Point ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-4-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Starting Point</motion.p>
@@ -192,7 +192,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── 6 Screens ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-5-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">{c.screens.title}</motion.p>
@@ -225,7 +225,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── Design Decisions ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-6-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">{c.decisions.title}</motion.p>
@@ -243,7 +243,7 @@ export default function POSFastFoodPage() {
         </motion.section>
 
         {/* ── Reflection ── */}
-        <motion.section className="py-10"
+        <motion.section key={`sec-7-${lang}`} className="py-10"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Reflection</motion.p>

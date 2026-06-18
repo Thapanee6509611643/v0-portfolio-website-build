@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LangProvider } from '@/context/LangContext'
 import './globals.css'
 
 const bricolage = Bricolage_Grotesque({
@@ -46,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <LangProvider>
+          {children}
+        </LangProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useLang } from "@/context/LangContext"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ExternalLink } from "lucide-react"
@@ -260,7 +260,7 @@ const colorMap = {
 //  Page
 // ============================================================
 export default function PosRedesignPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLang()
   const c = content[lang]
 
   return (
@@ -299,7 +299,7 @@ export default function PosRedesignPage() {
       <main className="max-w-5xl mx-auto px-6 pb-24">
 
         {/* ── Hero ── */}
-        <motion.section
+        <motion.section key={`sec-1-${lang}`}
           className="pt-14 pb-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -354,7 +354,7 @@ export default function PosRedesignPage() {
         </motion.section>
 
         {/* ── Overview ── */}
-        <motion.section
+        <motion.section key={`sec-2-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -381,7 +381,7 @@ export default function PosRedesignPage() {
         </motion.section>
 
         {/* ── Design System ── */}
-        <motion.section
+        <motion.section key={`sec-3-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -416,7 +416,7 @@ export default function PosRedesignPage() {
         </motion.section>
 
         {/* ── 7 Screens ── */}
-        <motion.section
+        <motion.section key={`sec-4-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -474,7 +474,7 @@ export default function PosRedesignPage() {
         </motion.section>
 
         {/* ── UX Decisions ── */}
-        <motion.section
+        <motion.section key={`sec-5-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -506,7 +506,7 @@ export default function PosRedesignPage() {
         </motion.section>
 
         {/* ── What I Learned ── */}
-        <motion.section
+        <motion.section key={`sec-6-${lang}`}
           className="py-10"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}

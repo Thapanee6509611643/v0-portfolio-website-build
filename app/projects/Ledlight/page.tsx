@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useLang } from "@/context/LangContext"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, Github } from "lucide-react"
@@ -134,7 +134,7 @@ const fadeUp = {
 }
 
 export default function LedlightPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLang()
   const c = content[lang]
 
   return (
@@ -159,7 +159,7 @@ export default function LedlightPage() {
       <main className="max-w-5xl mx-auto px-6 pb-24">
 
         {/* ── Hero ── */}
-        <motion.section className="pt-14 pb-10 border-b border-border"
+        <motion.section key={`sec-1-${lang}`} className="pt-14 pb-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">
@@ -189,7 +189,7 @@ export default function LedlightPage() {
         </motion.section>
 
         {/* ── Hero Image ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-2-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}>
           {c.heroImage ? (
             <img src={c.heroImage} alt={c.title} className="w-full rounded-2xl border border-border object-cover" />
@@ -203,7 +203,7 @@ export default function LedlightPage() {
         </motion.section>
 
         {/* ── The Brief ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-3-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">The Brief</motion.p>
@@ -216,7 +216,7 @@ export default function LedlightPage() {
         </motion.section>
 
         {/* ── Design Decision ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-4-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Design Thinking</motion.p>
@@ -252,7 +252,7 @@ export default function LedlightPage() {
         </motion.section>
 
         {/* ── 10 Sections ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-5-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">{c.sections.title}</motion.p>
@@ -290,7 +290,7 @@ export default function LedlightPage() {
         </motion.section>
 
         {/* ── What I Learned ── */}
-        <motion.section className="py-10"
+        <motion.section key={`sec-6-${lang}`} className="py-10"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">What I Learned</motion.p>

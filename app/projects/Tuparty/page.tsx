@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useLang } from "@/context/LangContext"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ExternalLink } from "lucide-react"
@@ -216,7 +216,7 @@ function Placeholder({ label, note }: { label: string; note?: string }) {
 }
 
 export default function TUPartyPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLang()
   const c = content[lang]
 
   return (
@@ -240,7 +240,7 @@ export default function TUPartyPage() {
       <main className="max-w-5xl mx-auto px-6 pb-24">
 
         {/* ── Hero ── */}
-        <motion.section className="pt-14 pb-10 border-b border-border"
+        <motion.section key={`sec-1-${lang}`} className="pt-14 pb-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">{c.role} · {c.year}</motion.p>
@@ -265,7 +265,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Hero Image ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-2-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}>
           {c.heroImage
             ? <img src={c.heroImage} alt={c.title} className="w-full rounded-2xl border border-border object-cover" />
@@ -273,7 +273,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Overview ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-3-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Overview</motion.p>
@@ -281,7 +281,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Problem ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-4-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Problem & Background</motion.p>
@@ -301,7 +301,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Research ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-5-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Research Process</motion.p>
@@ -320,7 +320,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Persona ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-6-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">User Segmentation & Persona</motion.p>
@@ -349,7 +349,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Key Features ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-7-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">{c.features.title}</motion.p>
@@ -375,7 +375,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Color System ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-8-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Visual Design</motion.p>
@@ -405,7 +405,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Prototype ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-9-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Prototype</motion.p>
@@ -445,7 +445,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── Usability Testing ── */}
-        <motion.section className="py-10 border-b border-border"
+        <motion.section key={`sec-10-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Usability Testing</motion.p>
@@ -475,7 +475,7 @@ export default function TUPartyPage() {
         </motion.section>
 
         {/* ── My Role ── */}
-        <motion.section className="py-10"
+        <motion.section key={`sec-11-${lang}`} className="py-10"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">My Role & Reflection</motion.p>
@@ -498,7 +498,7 @@ export default function TUPartyPage() {
 
         {/* ── CTA ── */}
         {c.links.figma && (
-          <motion.div className="py-8 flex justify-center"
+          <motion.div className="py-8 flex justify-center" key={`sec-12-${lang}`}
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <a href={c.links.figma} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-xl hover:bg-foreground/85 transition-colors">

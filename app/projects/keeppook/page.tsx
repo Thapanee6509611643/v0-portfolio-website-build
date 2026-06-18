@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useLang } from "@/context/LangContext"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ExternalLink, Github } from "lucide-react"
@@ -256,7 +256,7 @@ const fadeUp = {
 }
 
 export default function KeeppookPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLang()
   const c = content[lang]
 
   return (
@@ -288,7 +288,7 @@ export default function KeeppookPage() {
       <main className="max-w-5xl mx-auto px-6 pb-24">
 
         {/* ── Hero ── */}
-        <motion.section
+        <motion.section key={`sec-1-${lang}`}
           className="pt-14 pb-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -333,7 +333,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Highlights ── */}
-        <motion.section
+        <motion.section key={`sec-2-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
@@ -349,7 +349,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Screenshots ── */}
-        <motion.section
+        <motion.section key={`sec-3-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -392,7 +392,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Problem ── */}
-        <motion.section
+        <motion.section key={`sec-4-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -417,7 +417,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Design Process ── */}
-        <motion.section
+        <motion.section key={`sec-5-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -468,7 +468,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── How AI Works ── */}
-        <motion.section
+        <motion.section key={`sec-6-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -497,7 +497,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Gamification ── */}
-        <motion.section
+        <motion.section key={`sec-7-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={fadeUp}
@@ -508,7 +508,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Technical Challenges ── */}
-        <motion.section
+        <motion.section key={`sec-8-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
@@ -530,7 +530,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Limitations ── */}
-        <motion.section
+        <motion.section key={`sec-9-${lang}`}
           className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
@@ -547,7 +547,7 @@ export default function KeeppookPage() {
         </motion.section>
 
         {/* ── Future Work ── */}
-        <motion.section
+        <motion.section key={`sec-10-${lang}`}
           className="py-10"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
