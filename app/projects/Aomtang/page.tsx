@@ -17,13 +17,13 @@ const content = {
     tagline: "Saving money doesn't have to feel like a chore. I designed a finance app that actually looks like something you'd want to open every day.",
     statusTag: "Personal Project · Figma",
     tags: ["Figma", "UI Design", "Web App"],
-    figmaLink: "", // 🔗 ใส่ link Figma ที่นี่
-    heroImage: "" as string, // 🖼 Landing page hero screen
+    figmaLink: "https://www.figma.com/proto/CWZ1io1xgBnCCDJ9oz2zPF/%F0%9F%92%B0-%E0%B8%AD%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B1%E0%B8%87--OmTang-?node-id=215-717&t=zcL114HO4Mj56PC7-1&scaling=contain&content-scaling=fixed&page-id=0%3A1", // 🔗 ใส่ link Figma ที่นี่
+    heroImage: "/components/Photos/Aomtang.png" as string, // 🖼 Landing page hero screen
 
     ideaTitle: "The Idea",
     ideaBody: "Most finance apps look boring — serious and corporate — to the point where younger users don't want to open them. Yet saving money is a habit best started young.",
     ideaQuestion: "What if a finance app was delightful enough that people actually wanted to open it every day?",
-    ideaImage: "" as string, // 🖼 Landing page hero
+    ideaImage: "/components/OmTang/Landing Page — Hero.png" as string, // 🖼 Landing page hero
     ideaImageLabel: "Landing Page — Hero",
 
     directionTitle: "Design Direction: Friendly Finance",
@@ -48,7 +48,7 @@ const content = {
         desc: "Key numbers are large and immediately readable. No hunting for the figure that matters — visual hierarchy does the work.",
       },
     ],
-    directionImage: "" as string, // 🖼 Dashboard / หน้าหลัก
+    directionImage: "/components/OmTang/Main Screen.png" as string, // 🖼 Dashboard / หน้าหลัก
     directionImageLabel: "Dashboard — Main Screen",
 
     screensTitle: "4 Screens",
@@ -57,7 +57,7 @@ const content = {
         key: "01",
         name: "Landing Page",
         desc: "Hero section with illustration and a single email signup CTA. No clutter, no second-guessing where to look. One purpose, one action.",
-        image: "" as string, // 🖼 Landing page
+        image: "/components/OmTang/Landing Page.png" as string, // 🖼 Landing page
         imageLabel: "Landing Page",
         color: "purple",
       },
@@ -65,7 +65,7 @@ const content = {
         key: "02",
         name: "Dashboard (Home)",
         desc: "Three KPI cards (Balance, Expenses, Income) with trend indicators, a spending behavior pie chart, and a recent transactions list. Primary actions — Transfer, Pay Bill, Top Up, Withdraw — are shortcutted front and center.",
-        image: "" as string, // 🖼 หน้าหลัก
+        image: "/components/OmTang/Home.png" as string, // 🖼 หน้าหลัก
         imageLabel: "Dashboard — Home",
         color: "green",
       },
@@ -73,7 +73,7 @@ const content = {
         key: "03",
         name: "Wallet",
         desc: "All cards displayed as a card carousel. Add or remove cards, and filter recent transactions by card — so you always know exactly what each card has been used for.",
-        image: "" as string, // 🖼 กระเป๋าเงิน
+        image: "/components/OmTang/Wallet Screen.png" as string, // 🖼 กระเป๋าเงิน
         imageLabel: "Wallet Screen",
         color: "purple",
       },
@@ -81,7 +81,7 @@ const content = {
         key: "04",
         name: "Budget Planner",
         desc: "Budget overview card shows total budget, amount spent, and days remaining. Category cards each have a progress bar showing % used. A line chart shows spending trend through the month. A summary bar at the bottom compares recommended vs actual spend.",
-        image: "" as string, // 🖼 วางแผนการใช้จ่าย
+        image: "/components/OmTang/Budget Planner Screen.png" as string, // 🖼 วางแผนการใช้จ่าย
         imageLabel: "Budget Planner Screen",
         color: "green",
       },
@@ -133,13 +133,13 @@ const content = {
     tagline: "การออมเงินไม่จำเป็นต้องรู้สึกน่าเบื่อ เราออกแบบแอปการเงินที่ดูน่าเปิดทุกวัน",
     statusTag: "Personal Project · Figma",
     tags: ["Figma", "UI Design", "Web App"],
-    figmaLink: "",
-    heroImage: "" as string,
+    figmaLink: "https://www.figma.com/proto/CWZ1io1xgBnCCDJ9oz2zPF/%F0%9F%92%B0-%E0%B8%AD%E0%B8%AD%E0%B8%A1%E0%B8%95%E0%B8%B1%E0%B8%87--OmTang-?node-id=215-717&t=zcL114HO4Mj56PC7-1&scaling=contain&content-scaling=fixed&page-id=0%3A1",
+    heroImage: "/components/Photos/Aomtang.png" as string,
 
     ideaTitle: "ที่มาของไอเดีย",
     ideaBody: "แอปการเงินส่วนใหญ่ดูน่าเบื่อ serious และ corporate จนคนรุ่นใหม่ไม่อยากเปิด ทั้งที่การออมเงินคือนิสัยที่ควรเริ่มตั้งแต่อายุน้อย",
     ideaQuestion: "ถ้าแอปการเงินน่ารักและสนุกพอ คนจะใช้มันบ่อยขึ้นไหม?",
-    ideaImage: "" as string,
+    ideaImage: "/components/OmTang/Landing Page — Hero.png" as string,
     ideaImageLabel: "Landing Page — Hero",
 
     directionTitle: "Design Direction: Friendly Finance",
@@ -164,7 +164,7 @@ const content = {
         desc: "ตัวเลขสำคัญใหญ่และชัด อ่านได้ทันที ไม่ต้องหาว่าตัวเลขที่สำคัญอยู่ที่ไหน visual hierarchy ทำงานแทน",
       },
     ],
-    directionImage: "" as string,
+    directionImage: "/components/OmTang/Main Screen.png" as string,
     directionImageLabel: "Dashboard — หน้าหลัก",
 
     screensTitle: "4 หน้าหลัก",
@@ -173,7 +173,7 @@ const content = {
         key: "01",
         name: "Landing Page",
         desc: "Hero section ที่ดึงดูดด้วย illustration และ email signup CTA เดียว ไม่มี clutter ไม่ต้องเดาว่าต้องทำอะไร หนึ่งจุดประสงค์ หนึ่ง action",
-        image: "" as string,
+        image: "/components/OmTang/Landing Page.png" as string,
         imageLabel: "Landing Page",
         color: "purple",
       },
@@ -181,7 +181,7 @@ const content = {
         key: "02",
         name: "หน้าหลัก (Dashboard)",
         desc: "KPI cards 3 ตัว (ยอดคงเหลือ, รายจ่าย, รายรับ) พร้อม trend indicator, spending behavior pie chart, และ recent transactions list การกระทำหลักอย่างโอนเงิน จ่ายบิล เติมเงิน ถอนเงิน วาง shortcut ไว้ชัดเจน",
-        image: "" as string,
+        image: "/components/OmTang/Home.png" as string,
         imageLabel: "หน้าหลัก — Dashboard",
         color: "green",
       },
@@ -189,7 +189,7 @@ const content = {
         key: "03",
         name: "กระเป๋าเงิน",
         desc: "แสดงบัตรทุกใบแบบ card carousel เพิ่ม/ลบบัตรได้ และดู recent transactions กรองตามบัตรได้ รู้เสมอว่าบัตรแต่ละใบถูกใช้ทำอะไร",
-        image: "" as string,
+        image: "/components/OmTang/Wallet Screen.png" as string,
         imageLabel: "กระเป๋าเงิน",
         color: "purple",
       },
@@ -197,7 +197,7 @@ const content = {
         key: "04",
         name: "วางแผนการใช้จ่าย",
         desc: "Budget overview card แสดง งบรวมที่ใช้ได้ ใช้ไปแล้ว และวันที่เหลือ Category cards แต่ละหมวดมี progress bar บอก % ที่ใช้ไป Line chart แสดง spending trend ตลอดเดือน Summary bar ด้านล่างเปรียบเทียบค่าใช้จ่ายแนะนำ vs จริง",
-        image: "" as string,
+        image: "/components/OmTang/Budget Planner Screen.png" as string,
         imageLabel: "วางแผนการใช้จ่าย",
         color: "green",
       },
