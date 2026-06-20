@@ -16,15 +16,15 @@ const content = {
     tagline: "Built every line by hand, no AI, no copy-paste. One week. One full-stack app. One lesson I won't forget.",
 
     links: {
-      github: "", // 🔗 ใส่ GitHub link
-      demo: "",   // 🔗 ใส่ Live Demo link
+      github: "https://github.com/ThaLovelace/Hotel-Booking.git", // 🔗 ใส่ GitHub link
+      demo: "https://quickstay-blond.vercel.app/",   // 🔗 ใส่ Live Demo link
     },
 
     statusTag: "Personal Learning Project",
 
     tags: ["React", "Node.js", "Express", "MongoDB", "Clerk Auth", "Cloudinary", "Nodemailer", "Vercel"],
 
-    heroImage: "" as string, // 🔗 ใส่ path รูป Screenshot หน้า Home
+    heroImage: "/components/Photos/hotel.png" as string, // 🔗 ใส่ path รูป Screenshot หน้า Home
 
     why: {
       title: "Why I built this",
@@ -54,9 +54,9 @@ const content = {
     },
 
     screenImages: [
-      { image: "" as string, label: "Home", desc: "Hotel search & landing experience" },
-      { image: "" as string, label: "Room Details", desc: "Room info, availability & booking" },
-      { image: "" as string, label: "Owner Dashboard", desc: "Hotel management & booking stats" },
+      { image: "/components/QuickStay/Home.png" as string, label: "Home", desc: "Hotel search & landing experience" },
+      { image: "/components/QuickStay/Room Details.png" as string, label: "Room Details", desc: "Room info, availability & booking" },
+      { image: "/components/QuickStay/Owner Dashboard.png" as string, label: "Owner Dashboard", desc: "Hotel management & booking stats" },
     ],
 
     challenge: {
@@ -105,15 +105,15 @@ const content = {
     tagline: "เขียนทุกบรรทัดด้วยมือ ไม่ใช้ AI ไม่ Copy-paste หนึ่งอาทิตย์ หนึ่ง Full-Stack App หนึ่งบทเรียนที่ไม่มีวันลืม",
 
     links: {
-      github: "",
-      demo: "",
+      github: "https://github.com/ThaLovelace/Hotel-Booking.git",
+      demo: "https://quickstay-blond.vercel.app/",
     },
 
     statusTag: "Personal Learning Project",
 
     tags: ["React", "Node.js", "Express", "MongoDB", "Clerk Auth", "Cloudinary", "Nodemailer", "Vercel"],
 
-    heroImage: "" as string,
+    heroImage: "/components/Photos/hotel.png" as string,
 
     why: {
       title: "ทำไมถึงสร้างโปรเจคนี้",
@@ -143,9 +143,9 @@ const content = {
     },
 
     screenImages: [
-      { image: "" as string, label: "Home", desc: "ค้นหาโรงแรมและหน้า Landing" },
-      { image: "" as string, label: "Room Details", desc: "ข้อมูลห้อง ความพร้อมใช้งาน และการจอง" },
-      { image: "" as string, label: "Owner Dashboard", desc: "จัดการโรงแรมและดูสถิติการจอง" },
+      { image: "/components/QuickStay/Home.png" as string, label: "Home", desc: "ค้นหาโรงแรมและหน้า Landing" },
+      { image: "/components/QuickStay/Room Details.png" as string, label: "Room Details", desc: "ข้อมูลห้อง ความพร้อมใช้งาน และการจอง" },
+      { image: "/components/QuickStay/Owner Dashboard.png" as string, label: "Owner Dashboard", desc: "จัดการโรงแรมและดูสถิติการจอง" },
     ],
 
     challenge: {
