@@ -21,12 +21,12 @@ const content = {
 
     overviewTitle: "Overview",
     overview: "The client already had a fully functional POS system — but it didn't feel right. They came with wireframes for all 7 screens and a clear vision. My job was to redesign both the visual layer and the UX to be noticeably better, while staying true to what they envisioned.",
-    overviewImage: "" as string, // 🖼 ใส่ path รูป Design System Overview
+    overviewImage: "/components/Photos/pos.png" as string, // 🖼 ใส่ path รูป Design System Overview
 
     designSystemTitle: "Design System First",
     designSystemBody: "Before touching a single screen, I built a Design System from scratch: a typography scale, a color palette (orange as primary, neutral grays for backgrounds), button variants, and reusable components like Row, Table Header, and Form Field.",
     designSystemReason: "With 7 screens to redesign in parallel, a single source of truth means every screen stays consistent without manual cross-checking — and developers can read specs directly without asking follow-up questions.",
-    designSystemImage: "" as string, // 🖼 ใส่ path รูป Design System Canvas
+    designSystemImage: "/components/Restaurant POS/Design System Canvas.png" as string, // 🖼 ใส่ path รูป Design System Canvas
 
     screensTitle: "7 Screens Redesigned",
     screens: [
@@ -34,7 +34,7 @@ const content = {
         key: "01",
         name: "Cashier (Main Screen)",
         desc: "The most complex and critical screen. Layout is divided into 3 zones: sidebar navigation left, menu grid center, order summary right. Staff see everything in one view — no need to navigate away to check what's been added. Category filters are pill tabs at the top, and payment method sits directly below the order summary so the entire flow completes in one place.",
-        image: "" as string, // 🖼 cashier.png
+        image: "/components/Restaurant POS/cashier.png" as string, // 🖼 cashier.png
         imageLabel: "Cashier Screen",
         color: "green",
       },
@@ -42,7 +42,7 @@ const content = {
         key: "02",
         name: "Category List",
         desc: "A table list with an added status toggle. Staff can enable or disable a category in a single click — no need to open an edit screen. Green/gray status badges give an immediate read of every category's state at a glance.",
-        image: "" as string, // 🖼 Category_List.png
+        image: "/components/Restaurant POS/Category List.png" as string, // 🖼 Category_List.png
         imageLabel: "Category List Screen",
         color: "green",
       },
@@ -50,7 +50,7 @@ const content = {
         key: "03",
         name: "Item List",
         desc: "Food items with thumbnail images in list view, each with a visible on/off toggle for sale status. Owners can manage the full menu quickly without drilling into individual item pages.",
-        image: "" as string, // 🖼 Item_List.png
+        image: "/components/Restaurant POS/Item List.png" as string, // 🖼 Item_List.png
         imageLabel: "Item List Screen",
         color: "green",
       },
@@ -58,7 +58,7 @@ const content = {
         key: "04",
         name: "Create Item",
         desc: "The most form-heavy screen. Split into two panels: basic info on the left, option management on the right. Supports modifier groups (meat type, size) with drag-and-drop reordering and add-on pricing.",
-        image: "" as string, // 🖼 Create_Item.png
+        image: "/components/Restaurant POS/Create Item.png" as string, // 🖼 Create_Item.png
         imageLabel: "Create Item Screen",
         color: "purple",
       },
@@ -66,7 +66,7 @@ const content = {
         key: "05",
         name: "Order List",
         desc: "A full transaction history with clear status badges — Paid (green) and Cancelled (red). Filterable by date for quick lookup.",
-        image: "" as string, // 🖼 Order_List.png
+        image: "/components/Restaurant POS/Order List.png" as string, // 🖼 Order_List.png
         imageLabel: "Order List Screen",
         color: "purple",
       },
@@ -74,7 +74,7 @@ const content = {
         key: "06",
         name: "Order Detail (Popup)",
         desc: "A modal with a complete receipt breakdown including discounts and total. Color-coded action buttons: Print Receipt and Cancel Order.",
-        image: "" as string, // 🖼 Order_List_-_Order_Detail.png
+        image: "/components/Restaurant POS/Order List - Order Detail.png" as string, // 🖼 Order_List_-_Order_Detail.png
         imageLabel: "Order Detail Popup",
         color: "purple",
       },
