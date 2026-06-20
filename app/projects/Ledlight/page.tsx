@@ -15,7 +15,7 @@ const content = {
     links: { github: "" },
     statusTag: "Freelance · Delivered",
     tags: ["Next.js", "TailwindCSS", "Figma"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/ledlight.png" as string,
     brief: {
       title: "The Brief",
       body: "The client runs a 3D LED signage business and needed a sales landing page. They came with a content outline and section structure — no design spec, no color palette, just: 'make it modern and nice.'",
@@ -30,7 +30,7 @@ const content = {
         { label: "Psychological moment", desc: "The customer's mental image is a storefront at night with a glowing sign. The page should match that feeling." },
       ],
       conclusion: "Design led the product — it didn't just wrap the content.",
-      neonImage: "" as string,
+      neonImage: "/components/Ledlight/Neon Effect Close-up.png" as string,
     },
     sections: {
       title: "What I built — 10 sections, 1 page",
@@ -47,8 +47,8 @@ const content = {
         { name: "Final CTA", desc: "Close the sale" },
       ],
       sectionImages: [
-        { image: "" as string, label: "Pricing + Process", desc: "Conversion-focused sections" },
-        { image: "" as string, label: "Hero + Product", desc: "Visual hook and product showcase" },
+        { image: "/components/Ledlight/Pricing + Process.png" as string, label: "Pricing + Process", desc: "Conversion-focused sections" },
+        { image: "/components/Ledlight/Hero + Product.png" as string, label: "Hero + Product", desc: "Visual hook and product showcase" },
       ],
     },
     learned: [
@@ -75,7 +75,7 @@ const content = {
     links: { github: "" },
     statusTag: "Freelance · Delivered",
     tags: ["Next.js", "TailwindCSS", "Figma"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/ledlight.png" as string,
     brief: {
       title: "โจทย์ที่ได้รับ",
       body: "Client ทำธุรกิจป้ายอักษรไฟ 3D และต้องการ Sales Landing Page มีแค่ Content Outline และ Section Structure มาให้ — ไม่มี Design Spec ไม่มี Color Palette เฉพาะ มีแค่ 'อยากให้สวยและ Modern'",
@@ -90,7 +90,7 @@ const content = {
         { label: "Psychological Moment", desc: "ภาพในหัวของลูกค้าคือหน้าร้านยามค่ำคืนที่ป้ายไฟเด่น Page ควรให้ความรู้สึกนั้น" },
       ],
       conclusion: "Design นำ Product ไม่ใช่แค่ Wrap Content",
-      neonImage: "" as string,
+      neonImage: "/components/Ledlight/Neon Effect Close-up.png" as string,
     },
     sections: {
       title: "สิ่งที่สร้าง — 10 Sections ใน 1 หน้า",
@@ -107,8 +107,8 @@ const content = {
         { name: "Final CTA", desc: "ปิดดีล" },
       ],
       sectionImages: [
-        { image: "" as string, label: "Pricing + Process", desc: "Section ที่เน้น Conversion" },
-        { image: "" as string, label: "Hero + Product", desc: "Visual Hook และการนำเสนอ Product" },
+        { image: "/components/Ledlight/Pricing + Process.png" as string, label: "Pricing + Process", desc: "Section ที่เน้น Conversion" },
+        { image: "/components/Ledlight/Hero + Product.png" as string, label: "Hero + Product", desc: "Visual Hook และการนำเสนอ Product" },
       ],
     },
     learned: [
