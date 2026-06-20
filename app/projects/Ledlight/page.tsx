@@ -47,8 +47,8 @@ const content = {
         { name: "Final CTA", desc: "Close the sale" },
       ],
       sectionImages: [
-        { image: "/components/Ledlight/Pricing + Process.png" as string, label: "Pricing + Process", desc: "Conversion-focused sections" },
-        { image: "/components/Ledlight/Hero + Product.png" as string, label: "Hero + Product", desc: "Visual hook and product showcase" },
+        { image: "/components/Ledlight/Pricing.png" as string, label: "Pricing + Process", desc: "Conversion-focused sections" },
+        { image: "/components/Ledlight/Hero.png" as string, label: "Hero + Product", desc: "Visual hook and product showcase" },
       ],
     },
     learned: [
