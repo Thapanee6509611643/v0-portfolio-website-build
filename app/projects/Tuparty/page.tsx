@@ -61,7 +61,11 @@ const content = {
         { hex: "#EB7147", name: "Apricot", percent: "30%", usage: "Key UI elements: main headings, bottom navigation bar, recommended activity cards. Warm and energetic." },
         { hex: "#EB4811", name: "Burnt Orange", percent: "10%", usage: "Call-to-action buttons (FOLLOW, REGISTER) and important alerts. Draws the eye to action points." },
       ],
-      colorImage: "/components/TU Party/Color System in Use.png" as string,
+      colorImages: [
+        "/components/TU Party/Color System 1.png",
+        "/components/TU Party/Color System in Use.png",
+        "/components/TU Party/Color System 3.png",
+      ] as string[],
     },
     prototype: {
       title: "Prototype — Mid-Project to Final Iteration",
@@ -163,7 +167,11 @@ const content = {
         { hex: "#EB7147", name: "Apricot", percent: "30%", usage: "หัวข้อหลัก แถบเมนูด้านล่าง การ์ดกิจกรรมแนะนำ ให้ความรู้สึกอบอุ่นและกระตุ้นพลังงาน" },
         { hex: "#EB4811", name: "Burnt Orange", percent: "10%", usage: "ปุ่ม Call-to-Action (FOLLOW, REGISTER) และการแจ้งเตือนสำคัญ ดึงความสนใจไปยังจุดที่ต้องดำเนินการ" },
       ],
-      colorImage: "/components/TU Party/Color System in Use.png" as string,
+      colorImages: [
+        "/components/TU Party/Color System 1.png",
+        "/components/TU Party/Color System in Use.png",
+        "/components/TU Party/Color System 3.png",
+      ] as string[],
     },
     prototype: {
       title: "Prototype — Mid-Project to Final Iteration",
@@ -279,11 +287,9 @@ export default function TUPartyPage() {
         {/* ── Hero Image ── */}
         <motion.section key={`sec-2-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}>
-          <div className="flex justify-center">
-            {c.heroImage
-              ? <img src={c.heroImage} alt={c.title} className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
-              : <div className="w-full max-w-xs"><Placeholder label="TU Party — App Mockup" note="ใส่ path รูป Hero mockup (Home หรือ Matching Find)" /></div>}
-          </div>
+          {c.heroImage
+            ? <img src={c.heroImage} alt={c.title} className="w-full rounded-2xl border border-border object-cover" />
+            : <Placeholder label="TU Party — App Mockup" note="ใส่ path รูป Hero mockup (Home หรือ Matching Find)" />}
         </motion.section>
 
         {/* ── Overview ── */}
@@ -326,10 +332,10 @@ export default function TUPartyPage() {
             <span className="text-[#0F6E56] flex-shrink-0 mt-0.5">✦</span>
             <p className="text-sm text-muted-foreground">{c.research.role}</p>
           </motion.div>
-          <motion.div variants={fadeUp} className="flex justify-center">
+          <motion.div variants={fadeUp}>
             {c.research.affinityImage
-              ? <img src={c.research.affinityImage} alt="Affinity Diagram" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
-              : <div className="w-full max-w-xs"><Placeholder label="Affinity Diagram" note="ใส่ path รูป Affinity Diagram จาก Figma" /></div>}
+              ? <img src={c.research.affinityImage} alt="Affinity Diagram" className="w-full rounded-2xl border border-border object-cover" />
+              : <Placeholder label="Affinity Diagram" note="ใส่ path รูป Affinity Diagram จาก Figma" />}
           </motion.div>
         </motion.section>
 
@@ -355,10 +361,10 @@ export default function TUPartyPage() {
             <span className="text-[#3C3489] flex-shrink-0 mt-0.5">✦</span>
             <p className="text-sm text-muted-foreground">{c.persona.choice}</p>
           </motion.div>
-          <motion.div variants={fadeUp} className="flex justify-center">
+          <motion.div variants={fadeUp}>
             {c.persona.personaImage
-              ? <img src={c.persona.personaImage} alt="User Persona" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
-              : <div className="w-full max-w-xs"><Placeholder label="User Persona" note="ใส่ path รูป User Persona จาก Figma" /></div>}
+              ? <img src={c.persona.personaImage} alt="User Persona" className="w-full rounded-2xl border border-border object-cover" />
+              : <Placeholder label="User Persona" note="ใส่ path รูป User Persona จาก Figma" />}
           </motion.div>
         </motion.section>
 
@@ -411,11 +417,15 @@ export default function TUPartyPage() {
               </motion.div>
             ))}
           </div>
-          <motion.div variants={fadeUp} className="flex justify-center">
-            {c.colors.colorImage
-              ? <img src={c.colors.colorImage} alt="Color system in use" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
-              : <div className="w-full max-w-xs"><Placeholder label="Color System in Use" note="ใส่ path รูปหน้า Home ที่เห็นทั้ง 3 สีในหน้าเดียว" /></div>}
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {c.colors.colorImages.map((img, i) => (
+              <motion.div key={img || i} variants={fadeUp} className="flex justify-center">
+                {img
+                  ? <img src={img} alt={`Color system in use ${i + 1}`} className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
+                  : <div className="w-full max-w-xs"><Placeholder label="Color System in Use" note="ใส่ path รูปหน้า Home ที่เห็นทั้ง 3 สีในหน้าเดียว" /></div>}
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         {/* ── Prototype ── */}
