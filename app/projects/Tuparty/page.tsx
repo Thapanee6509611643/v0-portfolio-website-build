@@ -11,10 +11,10 @@ const content = {
     year: "2024",
     role: "University Project · UX Research & Prototype Design · Team of 7",
     tagline: "A full-semester HCI project — from user interviews to usability testing to iterated prototype. Every design decision backed by real research.",
-    links: { figma: "" },
+    links: { figma: "https://www.figma.com/proto/7pGnu6YksgvXzW1t9IbTTt/CS384_Prototype?node-id=24-409&t=vjzbVHprcMsAki8n-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A409" },
     statusTag: "CS384 (HCI) · Figma Prototype",
     tags: ["Figma", "UX Research", "Prototype Design", "Usability Testing", "CS384 (HCI)"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/tu.png" as string,
     overview: "TU Party is a mobile application that centralizes all club and activity information at Thammasat University in one place. Designed to solve the scattered, incomplete information problem that prevents students from finding and joining clubs. Built for iOS and Android, developed as a 7-person team across one full semester in CS384 Human-Computer Interaction.",
     problem: {
       title: "Problem & Background",
@@ -30,7 +30,7 @@ const content = {
       body: "The team conducted in-depth 1-on-1 and phone interviews with 10+ participants across multiple faculties and years. Interviewees were split into two groups: Service Providers (students with club leadership roles) and Service Receivers (general members and non-members).",
       affinity: "All interview data was organized into an Affinity Diagram, revealing 6 problem clusters: publicity, incomplete information, internal club communication, membership registration, platform mismatch, and personal motivation.",
       role: "Som-o's role: conducted face-to-face user interviews and co-analyzed transcripts to build the Affinity Diagram with the team.",
-      affinityImage: "" as string,
+      affinityImage: "/components/TU Party/Affinity Diagram.png" as string,
     },
     persona: {
       title: "User Segmentation & Persona",
@@ -41,15 +41,15 @@ const content = {
       ],
       choice: "The team chose Pattern 2 as the primary persona — they represent the exact problem TU Party is designed to solve: students who want to join but lack clear, centralized information to decide.",
       scenario: "From this persona, the team built a User Scenario around 'Ball' — a student interested in football looking for a matching club — as the anchor for Task Analysis and User Flow design.",
-      personaImage: "" as string,
+      personaImage: "/components/TU Party/User Persona.png" as string,
     },
     features: {
       title: "Key Features",
       items: [
-        { name: "Matching Find", desc: "An interest survey shown immediately after first login. Recommends clubs based on the user's personal preferences — directly addressing 'I don't know what clubs exist for me' from interviews.", image: "" as string },
-        { name: "Search + Compare", desc: "Search clubs by name or keyword, then select multiple to compare side by side — hours required, highlights, past activities. Makes the decision process concrete.", image: "" as string },
-        { name: "Club Profile", desc: "Full club detail page: activity format, current events, photo gallery, and real member reviews. Solves 'club information is incomplete' — the most common complaint from non-members.", image: "" as string },
-        { name: "Track Application Status", desc: "After submitting an application, users track status in real time: Under Review → Shortlisted → Accepted. No more waiting and wondering.", image: "" as string },
+        { name: "Matching Find", desc: "An interest survey shown immediately after first login. Recommends clubs based on the user's personal preferences — directly addressing 'I don't know what clubs exist for me' from interviews.", image: "/components/TU Party/01 Matching Find.png" as string },
+        { name: "Search + Compare", desc: "Search clubs by name or keyword, then select multiple to compare side by side — hours required, highlights, past activities. Makes the decision process concrete.", image: "/components/TU Party/02 Search + Compare.png" as string },
+        { name: "Club Profile", desc: "Full club detail page: activity format, current events, photo gallery, and real member reviews. Solves 'club information is incomplete' — the most common complaint from non-members.", image: "/components/TU Party/03 Club Profile.png" as string },
+        { name: "Track Application Status", desc: "After submitting an application, users track status in real time: Under Review → Shortlisted → Accepted. No more waiting and wondering.", image: "/components/TU Party/04 Track Application Status.png" as string },
       ],
     },
     colors: {
@@ -61,7 +61,7 @@ const content = {
         { hex: "#EB7147", name: "Apricot", percent: "30%", usage: "Key UI elements: main headings, bottom navigation bar, recommended activity cards. Warm and energetic." },
         { hex: "#EB4811", name: "Burnt Orange", percent: "10%", usage: "Call-to-action buttons (FOLLOW, REGISTER) and important alerts. Draws the eye to action points." },
       ],
-      colorImage: "" as string,
+      colorImage: "/components/TU Party/Color System in Use.png" as string,
     },
     prototype: {
       title: "Prototype — Mid-Project to Final Iteration",
@@ -75,8 +75,6 @@ const content = {
         "Changed some animations from Smart Animate to Instant to reduce component misalignment",
       ],
       role: "Som-o was the primary owner of the Prototype — responsible for building it in the mid-semester phase and leading all revisions after usability testing and instructor feedback.",
-      beforeImage: "" as string,
-      afterImage: "" as string,
     },
     usability: {
       title: "Usability Testing & Iteration",
@@ -88,7 +86,15 @@ const content = {
       ],
       result: "3 out of 5 users passed all metrics. 2 users failed to find the Compare feature — it was buried inside Search and not visible enough to discover naturally.",
       fix: "After testing: the Compare feature was repositioned to be accessible before and after search, not hidden inside it. Font size was increased at flagged points based on direct user feedback.",
-      testImage: "" as string,
+      resultsTitle: "Test Results",
+      resultsHeaders: ["Tester", "Task completion", "Errors", "Success rate", "Time", "Satisfaction", "Pass / Fail"],
+      resultsRows: [
+        { tester: "Khaofang", completion: "8", errors: "0", successRate: "100%", time: "1 min 5 sec", satisfaction: "78.125", status: "Pass" },
+        { tester: "Hoi Men Nai Talesi Fah", completion: "8", errors: "0", successRate: "100%", time: "52 sec", satisfaction: "90.625", status: "Pass" },
+        { tester: "Korsoro", completion: "8", errors: "0", successRate: "100%", time: "54 sec", satisfaction: "87.5", status: "Pass" },
+        { tester: "Xinq", completion: "6", errors: "2", successRate: "75%", time: "1 min 23 sec", satisfaction: "87.5", status: "Fail" },
+        { tester: "Kok", completion: "7", errors: "1", successRate: "87.5%", time: "1 min 50 sec", satisfaction: "93.33", status: "Fail" },
+      ],
     },
     myRole: {
       title: "My Role",
@@ -107,10 +113,10 @@ const content = {
     year: "2024",
     role: "University Project · UX Research & Prototype Design · ทีม 7 คน",
     tagline: "โปรเจกต์ HCI ตลอด 1 เทอม — ตั้งแต่สัมภาษณ์ผู้ใช้จริง ไปจนถึง Usability Testing และการปรับปรุง Prototype ทุก Design Decision มาจากข้อมูลจริง",
-    links: { figma: "" },
+    links: { figma: "https://www.figma.com/proto/7pGnu6YksgvXzW1t9IbTTt/CS384_Prototype?node-id=24-409&t=vjzbVHprcMsAki8n-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A409" },
     statusTag: "CS384 (HCI) · Figma Prototype",
     tags: ["Figma", "UX Research", "Prototype Design", "Usability Testing", "CS384 (HCI)"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/tu.png" as string,
     overview: "TU Party คือแอปพลิเคชันมือถือที่รวบรวมข้อมูลกิจกรรมและการรับสมัครชุมนุมทั้งหมดของมหาวิทยาลัยธรรมศาสตร์ไว้ในที่เดียว ออกแบบขึ้นเพื่อแก้ปัญหาการค้นหาชุมนุมที่กระจัดกระจายและไม่ครบถ้วน พัฒนาสำหรับ iOS และ Android โดยทีม 7 คน ตลอด 1 เทอม ในรายวิชา CS384 การปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์",
     problem: {
       title: "Problem & Background",
@@ -126,7 +132,7 @@ const content = {
       body: "ทีมเก็บข้อมูลด้วยการสัมภาษณ์เชิงลึกแบบตัวต่อตัวและทางโทรศัพท์ กว่า 10 คน ครอบคลุมหลายคณะและหลายชั้นปี แบ่งเป็น 2 กลุ่ม: ผู้ให้บริการ (ผู้มีตำแหน่งในชุมนุม) และผู้รับบริการ (สมาชิกทั่วไปและผู้ที่ไม่ได้อยู่ในชุมนุม)",
       affinity: "นำข้อมูลทั้งหมดมาทำ Affinity Diagram พบ 6 กลุ่มปัญหา: การประชาสัมพันธ์, ข้อมูลไม่ครบถ้วน, การสื่อสารภายใน, การลงทะเบียน, แพลตฟอร์มไม่เหมาะสม และเหตุผลส่วนตัวของผู้ใช้",
       role: "บทบาทของส้มส้ม: ลงพื้นที่สัมภาษณ์ผู้ใช้แบบตัวต่อตัว และร่วมวิเคราะห์บทสัมภาษณ์เพื่อสร้าง Affinity Diagram",
-      affinityImage: "" as string,
+      affinityImage: "/components/TU Party/Affinity Diagram.png" as string,
     },
     persona: {
       title: "User Segmentation & Persona",
@@ -137,15 +143,15 @@ const content = {
       ],
       choice: "ทีมเลือก Pattern 2 เป็น Persona หลัก เพราะสะท้อนปัญหาที่ TU Party ต้องการแก้ไขได้ตรงจุดที่สุด",
       scenario: "จาก Persona นี้ ทีมพัฒนา User Scenario ของ 'บอล' นักศึกษาที่สนใจฟุตบอลและอยากหาชุมนุม เพื่อเป็นแกนในการออกแบบ Task Analysis และ User Flow",
-      personaImage: "" as string,
+      personaImage: "/components/TU Party/User Persona.png" as string,
     },
     features: {
       title: "Key Features",
       items: [
-        { name: "Matching Find", desc: "แบบสำรวจความสนใจที่ผู้ใช้พบทันทีหลัง Login ครั้งแรก ระบบแนะนำชุมนุมตามความชอบ ตอบ Pain Point 'ไม่รู้ว่ามีชุมนุมอะไรที่เหมาะกับตัวเอง' โดยตรง", image: "" as string },
-        { name: "Search + Compare", desc: "ค้นหาชุมนุมด้วยชื่อหรือ Keyword และเลือกมาเปรียบเทียบได้ แสดงชั่วโมงเข้าร่วม จุดเด่น และกิจกรรมที่เคยจัด ทำให้ตัดสินใจได้ง่ายขึ้น", image: "" as string },
-        { name: "Club Profile", desc: "หน้ารายละเอียดชุมนุมครบถ้วน: รูปแบบกิจกรรม กิจกรรมปัจจุบัน ภาพประกอบ และ Review จากสมาชิกจริง แก้ปัญหา 'ข้อมูลชุมนุมไม่ครบ' ที่พบบ่อยในกลุ่มที่ยังไม่เข้าร่วม", image: "" as string },
-        { name: "Track Application Status", desc: "ติดตามสถานะการสมัครแบบ Real-time: กำลังตรวจสอบ → คัดเลือกผู้สมัคร → ผ่านการคัดเลือก ไม่ต้องคอยถามหรือเดาผลเอง", image: "" as string },
+        { name: "Matching Find", desc: "แบบสำรวจความสนใจที่ผู้ใช้พบทันทีหลัง Login ครั้งแรก ระบบแนะนำชุมนุมตามความชอบ ตอบ Pain Point 'ไม่รู้ว่ามีชุมนุมอะไรที่เหมาะกับตัวเอง' โดยตรง", image: "/components/TU Party/01 Matching Find.png" as string },
+        { name: "Search + Compare", desc: "ค้นหาชุมนุมด้วยชื่อหรือ Keyword และเลือกมาเปรียบเทียบได้ แสดงชั่วโมงเข้าร่วม จุดเด่น และกิจกรรมที่เคยจัด ทำให้ตัดสินใจได้ง่ายขึ้น", image: "/components/TU Party/02 Search + Compare.png" as string },
+        { name: "Club Profile", desc: "หน้ารายละเอียดชุมนุมครบถ้วน: รูปแบบกิจกรรม กิจกรรมปัจจุบัน ภาพประกอบ และ Review จากสมาชิกจริง แก้ปัญหา 'ข้อมูลชุมนุมไม่ครบ' ที่พบบ่อยในกลุ่มที่ยังไม่เข้าร่วม", image: "/components/TU Party/03 Club Profile.png" as string },
+        { name: "Track Application Status", desc: "ติดตามสถานะการสมัครแบบ Real-time: กำลังตรวจสอบ → คัดเลือกผู้สมัคร → ผ่านการคัดเลือก ไม่ต้องคอยถามหรือเดาผลเอง", image: "/components/TU Party/04 Track Application Status.png" as string },
       ],
     },
     colors: {
@@ -157,7 +163,7 @@ const content = {
         { hex: "#EB7147", name: "Apricot", percent: "30%", usage: "หัวข้อหลัก แถบเมนูด้านล่าง การ์ดกิจกรรมแนะนำ ให้ความรู้สึกอบอุ่นและกระตุ้นพลังงาน" },
         { hex: "#EB4811", name: "Burnt Orange", percent: "10%", usage: "ปุ่ม Call-to-Action (FOLLOW, REGISTER) และการแจ้งเตือนสำคัญ ดึงความสนใจไปยังจุดที่ต้องดำเนินการ" },
       ],
-      colorImage: "" as string,
+      colorImage: "/components/TU Party/Color System in Use.png" as string,
     },
     prototype: {
       title: "Prototype — Mid-Project to Final Iteration",
@@ -171,8 +177,6 @@ const content = {
         "เปลี่ยน Animation บางส่วนจาก Smart Animate เป็น Instant เพื่อลดความคลาดเคลื่อน",
       ],
       role: "ส้มส้มเป็นผู้รับผิดชอบหลักในการจัดทำ Prototype ทั้งช่วงกลางภาค และรับผิดชอบการปรับปรุงในช่วงปลายภาคหลังจากผลการทดสอบ Usability และ Feedback จากอาจารย์",
-      beforeImage: "" as string,
-      afterImage: "" as string,
     },
     usability: {
       title: "Usability Testing & Iteration",
@@ -184,7 +188,15 @@ const content = {
       ],
       result: "3 จาก 5 คนผ่านเกณฑ์ทั้งหมด 2 คนหาฟีเจอร์ Compare ไม่เจอ เพราะถูกซ่อนอยู่ใน Search ไม่ชัดเจนพอ",
       fix: "ปรับให้ฟีเจอร์ Compare เข้าถึงได้ทั้งก่อนและหลัง Search ไม่ถูกซ่อนอยู่ลึกอีกต่อไป และขยายขนาดตัวอักษรในจุดที่ผู้ใช้ให้ Feedback",
-      testImage: "" as string,
+      resultsTitle: "ผลการทดสอบ",
+      resultsHeaders: ["ผู้ทดสอบ", "Task completion", "Errors", "Success rate", "Time", "Satisfaction", "Pass / Fail"],
+      resultsRows: [
+        { tester: "ข้าวฟ่าง", completion: "8", errors: "0", successRate: "100%", time: "1 นาที 5 วินาที", satisfaction: "78.125", status: "Pass" },
+        { tester: "หอยเม่นในทะเลสีฟ้า", completion: "8", errors: "0", successRate: "100%", time: "52 วินาที", satisfaction: "90.625", status: "Pass" },
+        { tester: "กอศอรอ", completion: "8", errors: "0", successRate: "100%", time: "54 วินาที", satisfaction: "87.5", status: "Pass" },
+        { tester: "Xinq", completion: "6", errors: "2", successRate: "75%", time: "1 นาที 23 วินาที", satisfaction: "87.5", status: "Fail" },
+        { tester: "กก", completion: "7", errors: "1", successRate: "87.5%", time: "1 นาที 50 วินาที", satisfaction: "93.33", status: "Fail" },
+      ],
     },
     myRole: {
       title: "บทบาทของส้มส้ม",
@@ -267,9 +279,11 @@ export default function TUPartyPage() {
         {/* ── Hero Image ── */}
         <motion.section key={`sec-2-${lang}`} className="py-10 border-b border-border"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}>
-          {c.heroImage
-            ? <img src={c.heroImage} alt={c.title} className="w-full rounded-2xl border border-border object-cover" />
-            : <Placeholder label="TU Party — App Mockup" note="ใส่ path รูป Hero mockup (Home หรือ Matching Find)" />}
+          <div className="flex justify-center">
+            {c.heroImage
+              ? <img src={c.heroImage} alt={c.title} className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
+              : <div className="w-full max-w-xs"><Placeholder label="TU Party — App Mockup" note="ใส่ path รูป Hero mockup (Home หรือ Matching Find)" /></div>}
+          </div>
         </motion.section>
 
         {/* ── Overview ── */}
@@ -312,10 +326,10 @@ export default function TUPartyPage() {
             <span className="text-[#0F6E56] flex-shrink-0 mt-0.5">✦</span>
             <p className="text-sm text-muted-foreground">{c.research.role}</p>
           </motion.div>
-          <motion.div variants={fadeUp}>
+          <motion.div variants={fadeUp} className="flex justify-center">
             {c.research.affinityImage
-              ? <img src={c.research.affinityImage} alt="Affinity Diagram" className="w-full rounded-2xl border border-border object-cover" />
-              : <Placeholder label="Affinity Diagram" note="ใส่ path รูป Affinity Diagram จาก Figma" />}
+              ? <img src={c.research.affinityImage} alt="Affinity Diagram" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
+              : <div className="w-full max-w-xs"><Placeholder label="Affinity Diagram" note="ใส่ path รูป Affinity Diagram จาก Figma" /></div>}
           </motion.div>
         </motion.section>
 
@@ -341,10 +355,10 @@ export default function TUPartyPage() {
             <span className="text-[#3C3489] flex-shrink-0 mt-0.5">✦</span>
             <p className="text-sm text-muted-foreground">{c.persona.choice}</p>
           </motion.div>
-          <motion.div variants={fadeUp}>
+          <motion.div variants={fadeUp} className="flex justify-center">
             {c.persona.personaImage
-              ? <img src={c.persona.personaImage} alt="User Persona" className="w-full rounded-2xl border border-border object-cover" />
-              : <Placeholder label="User Persona" note="ใส่ path รูป User Persona จาก Figma" />}
+              ? <img src={c.persona.personaImage} alt="User Persona" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
+              : <div className="w-full max-w-xs"><Placeholder label="User Persona" note="ใส่ path รูป User Persona จาก Figma" /></div>}
           </motion.div>
         </motion.section>
 
@@ -360,10 +374,10 @@ export default function TUPartyPage() {
                   <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#FAEEDA] text-[#633806]">{String(i + 1).padStart(2, "0")}</span>
                   <span className="text-sm font-semibold">{f.name}</span>
                 </div>
-                <div className="p-5">
+                <div className="p-5 flex flex-col items-center">
                   {f.image
-                    ? <img src={f.image} alt={f.name} className="w-full rounded-xl border border-border object-cover mb-4" />
-                    : <div className="w-full rounded-xl bg-muted border border-dashed border-border h-40 flex flex-col items-center justify-center gap-2 text-muted-foreground mb-4">
+                    ? <img src={f.image} alt={f.name} className="w-full max-w-[180px] rounded-xl border border-border object-cover aspect-[9/19] mb-4" />
+                    : <div className="w-full max-w-[180px] rounded-xl bg-muted border border-dashed border-border aspect-[9/19] flex flex-col items-center justify-center gap-2 text-muted-foreground mb-4">
                         <span className="text-xl">📱</span>
                         <p className="text-xs">{f.name}</p>
                       </div>}
@@ -397,10 +411,10 @@ export default function TUPartyPage() {
               </motion.div>
             ))}
           </div>
-          <motion.div variants={fadeUp}>
+          <motion.div variants={fadeUp} className="flex justify-center">
             {c.colors.colorImage
-              ? <img src={c.colors.colorImage} alt="Color system in use" className="w-full rounded-2xl border border-border object-cover" />
-              : <Placeholder label="Color System in Use" note="ใส่ path รูปหน้า Home ที่เห็นทั้ง 3 สีในหน้าเดียว" />}
+              ? <img src={c.colors.colorImage} alt="Color system in use" className="w-full max-w-xs rounded-2xl border border-border object-cover aspect-[9/19]" />
+              : <div className="w-full max-w-xs"><Placeholder label="Color System in Use" note="ใส่ path รูปหน้า Home ที่เห็นทั้ง 3 สีในหน้าเดียว" /></div>}
           </motion.div>
         </motion.section>
 
@@ -428,20 +442,6 @@ export default function TUPartyPage() {
             <span className="text-[#0F6E56] flex-shrink-0 mt-0.5">✦</span>
             <p className="text-sm text-muted-foreground">{c.prototype.role}</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div variants={fadeUp} className="flex flex-col gap-3">
-              {c.prototype.beforeImage
-                ? <img src={c.prototype.beforeImage} alt="Mid-semester prototype" className="w-full rounded-2xl border border-border object-cover" />
-                : <Placeholder label="Mid-Semester Version" note="ใส่ path รูป Prototype กลางเทอม" />}
-              <p className="text-xs text-muted-foreground text-center">Mid-semester version</p>
-            </motion.div>
-            <motion.div variants={fadeUp} className="flex flex-col gap-3">
-              {c.prototype.afterImage
-                ? <img src={c.prototype.afterImage} alt="Final prototype" className="w-full rounded-2xl border border-border object-cover" />
-                : <Placeholder label="Final Version" note="ใส่ path รูป Prototype ปลายเทอม" />}
-              <p className="text-xs text-muted-foreground text-center">Final version — after iteration</p>
-            </motion.div>
-          </div>
         </motion.section>
 
         {/* ── Usability Testing ── */}
@@ -467,10 +467,38 @@ export default function TUPartyPage() {
             <span className="text-[#0F6E56] flex-shrink-0 mt-0.5">→</span>
             <p className="text-sm text-muted-foreground"><span className="font-semibold">Fix: </span>{c.usability.fix}</p>
           </motion.div>
-          <motion.div variants={fadeUp}>
-            {c.usability.testImage
-              ? <img src={c.usability.testImage} alt="Usability test results" className="w-full rounded-2xl border border-border object-cover" />
-              : <Placeholder label="Usability Test Results" note="ใส่ path รูปตาราง/กราฟผลการทดสอบ หรือ Before/After Compare feature" />}
+          <motion.div variants={fadeUp} className="rounded-2xl border border-border overflow-hidden">
+            <div className="px-6 py-4 border-b border-border bg-muted/30">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{c.usability.resultsTitle}</p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-muted/20 border-b border-border">
+                    {c.usability.resultsHeaders.map((h) => (
+                      <th key={h} className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-muted-foreground whitespace-nowrap">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {c.usability.resultsRows.map((r) => (
+                    <tr key={r.tester} className="hover:bg-muted/10">
+                      <td className="px-4 py-3 font-medium whitespace-nowrap">{r.tester}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{r.completion}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{r.errors}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{r.successRate}</td>
+                      <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{r.time}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{r.satisfaction}</td>
+                      <td className="px-4 py-3">
+                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${r.status === "Pass" ? "bg-[#E1F5EE] text-[#0F6E56]" : "bg-[#FCEBEB] text-[#A32D2D]"}`}>
+                          {r.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </motion.div>
         </motion.section>
 
