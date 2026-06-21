@@ -11,10 +11,10 @@ const content = {
     year: "2024",
     role: "University Project · UX/UI Designer · Team of 9",
     tagline: "My first Figma file. Designed from a database schema, not a mood board. 6 screens, 6 days.",
-    links: { figma: "" },
+    links: { figma: "https://www.figma.com/proto/FMSSnmpmhx5lJOaAWyuwOs/CS251-POS?node-id=46-10&t=Kj3zmMFrGlwow8Lg-1&scaling=contain&content-scaling=fixed&page-id=46%3A4&starting-point-node-id=46%3A10&show-proto-sidebar=1" },
     statusTag: "University Project · Figma Prototype",
     tags: ["Figma", "UX/UI Design"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/POS Fast Food System.png" as string,
     brief: {
       title: "The Brief",
       body: "This project was part of CS251 Database Systems. A team of 9 — DB Designers, Backend, Frontend, and UX/UI — each took a role. My job was to take the functional requirements and database schema the team had built together, and turn them into an interface that cashiers could actually use on the floor.",
@@ -28,12 +28,12 @@ const content = {
     screens: {
       title: "6 Screens, 6 Roles",
       items: [
-        { name: "Login", image: "" as string, desc: "Employee ID + Password. Automatic Time In recorded on login.", highlight: false },
-        { name: "Home (Order Taking)", image: "" as string, desc: "The screen that took the most time. 3-zone layout: menu categories left, food grid center, order list right. Staff never need to navigate away mid-order. Category filter + promotion section up top for upselling. Color-coded status badges (Wait List / Served) for instant scanning.", highlight: true },
-        { name: "Manage Dish", image: "" as string, desc: "Menu and promotion management for owners. Same layout as Home for familiarity — with ADD button and edit/delete action icons layered in.", highlight: false },
-        { name: "Member", image: "" as string, desc: "Member list table with search and pagination. Built to handle a large number of members.", highlight: false },
-        { name: "Transaction", image: "" as string, desc: "Full sales log with date filtering. Every transaction recorded for reporting.", highlight: false },
-        { name: "Account", image: "" as string, desc: "Employee profile + Check In/Out activity log + daily/monthly sales chart.", highlight: false },
+        { name: "Login", image: "/components/POS/Login.png" as string, desc: "Employee ID + Password. Automatic Time In recorded on login.", highlight: false },
+        { name: "Home (Order Taking)", image: "/components/POS/Home.png" as string, desc: "The screen that took the most time. 3-zone layout: menu categories left, food grid center, order list right. Staff never need to navigate away mid-order. Category filter + promotion section up top for upselling. Color-coded status badges (Wait List / Served) for instant scanning.", highlight: true },
+        { name: "Manage Dish", image: "/components/POS/Manage Dish.png" as string, desc: "Menu and promotion management for owners. Same layout as Home for familiarity — with ADD button and edit/delete action icons layered in.", highlight: false },
+        { name: "Member", image: "/components/POS/Member.png" as string, desc: "Member list table with search and pagination. Built to handle a large number of members.", highlight: false },
+        { name: "Transaction", image: "/components/POS/Transaction.png" as string, desc: "Full sales log with date filtering. Every transaction recorded for reporting.", highlight: false },
+        { name: "Account", image: "/components/POS/Account.png" as string, desc: "Employee profile + Check In/Out activity log + daily/monthly sales chart.", highlight: false },
       ],
     },
     decisions: {
@@ -55,10 +55,10 @@ const content = {
     year: "2024",
     role: "University Project · UX/UI Designer · ทีม 9 คน",
     tagline: "ไฟล์ Figma แรกในชีวิต ออกแบบจาก Database Schema ไม่ใช่ Mood Board 6 หน้า 6 วัน",
-    links: { figma: "" },
+    links: { figma: "https://www.figma.com/proto/FMSSnmpmhx5lJOaAWyuwOs/CS251-POS?node-id=46-10&t=Kj3zmMFrGlwow8Lg-1&scaling=contain&content-scaling=fixed&page-id=46%3A4&starting-point-node-id=46%3A10&show-proto-sidebar=1" },
     statusTag: "University Project · Figma Prototype",
     tags: ["Figma", "UX/UI Design"],
-    heroImage: "" as string,
+    heroImage: "/components/Photos/POS Fast Food System.png" as string,
     brief: {
       title: "โจทย์ที่ได้รับ",
       body: "โปรเจคนี้เป็นส่วนหนึ่งของวิชา CS251 Database Systems ทีม 9 คนแบ่งหน้าที่กัน — DB Designer, Backend, Frontend และ UX/UI Designer งานของเราคือแปลง Functional Requirements และ Database Schema ที่ทีมออกแบบร่วมกันให้กลายเป็น Interface ที่พนักงานหน้าร้านใช้งานได้จริง",
@@ -72,12 +72,12 @@ const content = {
     screens: {
       title: "6 Screens, 6 Roles",
       items: [
-        { name: "Login", image: "" as string, desc: "Employee ID + Password ระบบบันทึก Time In อัตโนมัติเมื่อล็อกอิน", highlight: false },
-        { name: "Home (Order Taking)", image: "" as string, desc: "หน้าที่ใช้เวลาออกแบบมากที่สุด Layout แบ่ง 3 Zone ชัดเจน: เมนูซ้าย, Food Grid กลาง, Order List ขวา พนักงานไม่ต้องเปลี่ยนหน้าจอระหว่างรับออเดอร์เลย มี Filter ตาม Category และ Promotion Section ด้านบน Status Badge สี (Wait List / Served) ช่วยให้เห็นสถานะออเดอร์ทั้งหมดได้ทันที", highlight: true },
-        { name: "Manage Dish", image: "" as string, desc: "หน้าจัดการเมนูและ Promotion สำหรับเจ้าของร้าน ใช้ Layout เดียวกับ Home เพื่อให้ Familiar แต่เพิ่ม ADD Button และ Action Icons", highlight: false },
-        { name: "Member", image: "" as string, desc: "ตาราง List สมาชิกพร้อม Search และ Pagination รองรับสมาชิกจำนวนมาก", highlight: false },
-        { name: "Transaction", image: "" as string, desc: "บันทึกการขายทุกรายการ Filter ตามวันที่ได้ ครบทุก Transaction เพื่อการ Report", highlight: false },
-        { name: "Account", image: "" as string, desc: "โปรไฟล์พนักงาน + Check In/Out Activity Log + Sales Chart รายวัน/รายเดือน", highlight: false },
+        { name: "Login", image: "/components/POS/Login.png" as string, desc: "Employee ID + Password ระบบบันทึก Time In อัตโนมัติเมื่อล็อกอิน", highlight: false },
+        { name: "Home (Order Taking)", image: "/components/POS/Home.png" as string, desc: "หน้าที่ใช้เวลาออกแบบมากที่สุด Layout แบ่ง 3 Zone ชัดเจน: เมนูซ้าย, Food Grid กลาง, Order List ขวา พนักงานไม่ต้องเปลี่ยนหน้าจอระหว่างรับออเดอร์เลย มี Filter ตาม Category และ Promotion Section ด้านบน Status Badge สี (Wait List / Served) ช่วยให้เห็นสถานะออเดอร์ทั้งหมดได้ทันที", highlight: true },
+        { name: "Manage Dish", image: "/components/POS/Manage Dish.png" as string, desc: "หน้าจัดการเมนูและ Promotion สำหรับเจ้าของร้าน ใช้ Layout เดียวกับ Home เพื่อให้ Familiar แต่เพิ่ม ADD Button และ Action Icons", highlight: false },
+        { name: "Member", image: "/components/POS/Member.png" as string, desc: "ตาราง List สมาชิกพร้อม Search และ Pagination รองรับสมาชิกจำนวนมาก", highlight: false },
+        { name: "Transaction", image: "/components/POS/Transaction.png" as string, desc: "บันทึกการขายทุกรายการ Filter ตามวันที่ได้ ครบทุก Transaction เพื่อการ Report", highlight: false },
+        { name: "Account", image: "/components/POS/Account.png" as string, desc: "โปรไฟล์พนักงาน + Check In/Out Activity Log + Sales Chart รายวัน/รายเดือน", highlight: false },
       ],
     },
     decisions: {
