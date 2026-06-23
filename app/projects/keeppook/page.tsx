@@ -33,12 +33,11 @@ const content = {
 
     screenshots: {
       title: "App in action",
-      demoVideo: "" as string,
       screens: [
-        { image: "" as string, label: "Dashboard", desc: "Balance overview & recent transactions" },
-        { image: "" as string, label: "Smart Input", desc: "AI auto-categorizes as you type" },
-        { image: "" as string, label: "Calendar", desc: "Browse spending history by date" },
-        { image: "" as string, label: "Chart & AI Advisor", desc: "Spending breakdown + AI financial tips" },
+        { image: "/components/Keeppook/Dashboard.png" as string, label: "Dashboard", desc: "Balance overview & recent transactions" },
+        { image: "/components/Keeppook/Smart Input.png" as string, label: "Smart Input", desc: "AI auto-categorizes as you type" },
+        { image: "/components/Keeppook/Calendar.png" as string, label: "Calendar", desc: "Browse spending history by date" },
+        { image: "/components/Keeppook/Chart.png" as string, label: "Chart & AI Advisor", desc: "Spending breakdown + AI financial tips" },
       ],
     },
 
@@ -60,8 +59,8 @@ const content = {
     design: {
       title: "Design before code",
       body: "Before writing a single line of Java, the entire app was mapped out in Figma — from low-fidelity wireframes to a complete high-fidelity UI system. This process helped surface UX decisions early and kept the development phase focused.",
-      lofiImage: "" as string,
-      hifiImage: "" as string,
+      lofiImage: "/components/Keeppook/Low-fi.png" as string,
+      hifiImage: "/components/Keeppook/Hi-fi.png" as string,
       lofiLabel: "Low-fidelity wireframes — layout and user flow",
       hifiLabel: "High-fidelity UI — final visual design in Figma",
     },
@@ -136,7 +135,7 @@ const content = {
     tagline: "แอปบันทึกรายจ่ายที่จัดหมวดหมู่ให้อัตโนมัติ ก่อนที่คุณจะต้องคิด",
 
     links: {
-      github: "https://github.com/ThaLovelace/Keeppook",
+      github: "https://github.com/ThaLovelace/KeepTang.git",
       demo: "",
     },
 
@@ -168,20 +167,19 @@ const content = {
 
     screenshots: {
       title: "หน้าจอแอปจริง",
-      demoVideo: "" as string,
       screens: [
-        { image: "" as string, label: "Dashboard", desc: "ภาพรวมยอดเงินและรายการล่าสุด" },
-        { image: "" as string, label: "Smart Input", desc: "AI จัดหมวดหมู่ให้อัตโนมัติขณะพิมพ์" },
-        { image: "" as string, label: "ปฏิทิน", desc: "ดูประวัติการใช้จ่ายตามวันที่" },
-        { image: "" as string, label: "Chart & AI Advisor", desc: "กราฟสรุปรายจ่าย + คำแนะนำจาก AI" },
+        { image: "/components/Keeppook/Dashboard.png" as string, label: "Dashboard", desc: "ภาพรวมยอดเงินและรายการล่าสุด" },
+        { image: "/components/Keeppook/Smart Input.png" as string, label: "Smart Input", desc: "AI จัดหมวดหมู่ให้อัตโนมัติขณะพิมพ์" },
+        { image: "/components/Keeppook/Calendar.png" as string, label: "ปฏิทิน", desc: "ดูประวัติการใช้จ่ายตามวันที่" },
+        { image: "/components/Keeppook/Chart.png" as string, label: "Chart & AI Advisor", desc: "กราฟสรุปรายจ่าย + คำแนะนำจาก AI" },
       ],
     },
 
     design: {
       title: "ออกแบบก่อนเขียนโค้ด",
       body: "ก่อนจะเขียน Java แม้แต่บรรทัดเดียว แอปทั้งหมดถูกออกแบบใน Figma ตั้งแต่ Low-fidelity Wireframe จนถึง High-fidelity UI System ช่วยให้ตัดสินใจเรื่อง UX ได้ตั้งแต่ต้น และทำให้ขั้นตอน Dev โฟกัสมากขึ้น",
-      lofiImage: "" as string,
-      hifiImage: "" as string,
+      lofiImage: "/components/Keeppook/Low-fi.png" as string,
+      hifiImage: "/components/Keeppook/Hi-fi.png" as string,
       lofiLabel: "Low-fidelity Wireframe — Layout และ User Flow",
       hifiLabel: "High-fidelity UI — งานออกแบบสุดท้ายใน Figma",
     },
@@ -356,19 +354,6 @@ export default function KeeppookPage() {
         >
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">App Screens</motion.p>
           <motion.h2 variants={fadeUp} className="font-serif text-2xl font-bold mb-8">{c.screenshots.title}</motion.h2>
-
-          {/* Demo video placeholder */}
-          <motion.div variants={fadeUp} className="mb-8">
-            {c.screenshots.demoVideo ? (
-              <video src={c.screenshots.demoVideo} controls className="w-full rounded-2xl border border-border" />
-            ) : (
-              <div className="w-full rounded-2xl bg-muted/50 border border-dashed border-border h-48 flex flex-col items-center justify-center gap-2 text-muted-foreground">
-                <span className="text-3xl">🎬</span>
-                <p className="text-sm font-medium">Demo Video</p>
-                <p className="text-xs opacity-60">ใส่คลิป Demo: เปลี่ยน demoVideo ใน content object</p>
-              </div>
-            )}
-          </motion.div>
 
           {/* 4 screenshots grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
